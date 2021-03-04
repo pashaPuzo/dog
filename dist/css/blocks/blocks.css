@@ -1,0 +1,10 @@
+.button {
+    display: inline-block;
+    cursor: pointer;
+    padding: rem(11px) 0 rem(12px);
+}
+
+.button--orange {
+    background-color: #FC5130;
+    color: #FFFFFF;
+}

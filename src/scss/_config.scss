@@ -1,0 +1,85 @@
+@import "./mixins";
+
+// @include font('Gotham Pro', 'normal', 'normal', '../fonts/GothamPro.woff2');
+// @include font('Gotham Pro', 'normal', 'bold', '../fonts/GothamPro-Bold.woff2');
+
+$userFontMain: "Roboto";
+$fonts: $userFontMain, system-ui, -apple-system, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$fontsize: rem(16px);
+$textcolor: #274341;
+$accent: #FC5130;
+
+::placeholder {
+  color: #666;
+}
+
+::selection {
+  background-color: $accent;
+  color: #fff;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+body,
+html {
+  font-family: $fonts;
+  font-size: $fontsize;
+  color: $textcolor;
+  line-height: 1.5;
+  min-width: rem(320px);
+  position: relative;
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  padding-right: rem(15px);
+  padding-left: rem(15px);
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: 576.05px) {
+    max-width: 540px;
+  }
+
+  @media (min-width: 768.05px) {
+    max-width: 720px;
+  }
+
+  @media (min-width: 992.05px) {
+    max-width: 960px;
+  }
+
+  @media (min-width: 1200.05px) {
+    max-width: 1140px;
+  }
+
+  @media (min-width: 1400.05px) {
+    max-width: 1320px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.content {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: auto;
+}
+
+footer.footer {
+  min-height: rem(15px);
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+}

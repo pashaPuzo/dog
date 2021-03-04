@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="./dist/css/styles.min.css">
+</head>
+<body>
+    
+    <div class="wrapper">
+        <header class="header"></header>
+        <main class="content"></main>
+        <footer class="footer"></footer>
+    </div>
+
+
+    <script src="./dist/js/scripts.min.js"></script>
+
+    <div class="modal-overlay modal-overlay--blur"></div>
+    <div class="modal" data-target-id="some-modal-1">
+        <div class="modal__header">
+            <div class="modal__title">Заголовок модального окна 1</div>
+            <div class="modal__close js-modal-close">x</div>
+        </div>
+        <div class="modal__body">
+            <a href="" data-target="some-modal-2" class="js-open-modal">Открыть модальное окно 2</a>
+        </div>
+        <div class="modal__footer">
+            <button class="button js-modal-close">Закрыть</button>
+        </div>
+    </div>
+    <div class="modal" data-target-id="some-modal-2">
+        <div class="modal__header">
+            <div class="modal__title">Заголовок модального окна 2</div>
+            <div class="modal__close js-modal-close">x</div>
+        </div>
+        <div class="modal__body">
+            <a href="" data-target="some-modal-1" class="js-open-modal">Открыть модальное окно 1</a>
+        </div>
+        <div class="modal__footer">
+            <button class="button js-modal-close">Закрыть</button>
+        </div>
+    </div>
+</body>
+</html>

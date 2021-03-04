@@ -1,0 +1,14 @@
+@import "../../node_modules/css-reset-and-normalize/scss/button-reset.scss";
+@import "../../node_modules/css-reset-and-normalize/scss/link-reset.scss";
+@import "../../node_modules/css-reset-and-normalize/scss/reset-and-normalize.scss";
+@import "../../node_modules/sass-rem/rem";
+
+@import "./config";
+@import "./libs/libs";
+
+@import './blocks/blocks';
+
+img {
+    display: block;
+    max-width: 100%;
+}
