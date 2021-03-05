@@ -1733,11 +1733,22 @@ footer.footer {
     top: 50%;
     width: 100%;
     height: 100%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    -ms-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
     -o-object-fit: cover;
     object-fit: cover;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    -o-transition: transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.mini-post__image:hover img {
+    -webkit-transform: translate(-50%, -50%) scale(1.2);
+    -ms-transform: translate(-50%, -50%) scale(1.2);
+    transform: translate(-50%, -50%) scale(1.2);
 }
 
 .mini-post__right {
@@ -1753,6 +1764,7 @@ footer.footer {
     font-size: 1rem;
     color: #313131;
     margin-bottom: 0.3125rem;
+    line-height: 1.375rem;
 }
 
 .mini-post__more {
@@ -1795,6 +1807,16 @@ footer.footer {
     color: #717171;
     line-height: 1.25rem;
     margin-left: 0.4375rem;
+}
+
+.mini-post__link {
+    -webkit-transition: color 0.3s;
+    -o-transition: color 0.3s;
+    transition: color 0.3s;
+}
+
+.mini-post__link:hover {
+    color: #FFC700;
 }
 
 .last-posts__title {

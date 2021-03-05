@@ -21,8 +21,15 @@
             top: 50%;
             width: 100%;
             height: 100%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%) scale(1);
             object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        &:hover {
+            img {
+                transform: translate(-50%, -50%) scale(1.2);
+            }
         }
     }
 
@@ -37,6 +44,8 @@
         font-size: rem(16px);
         color: #313131;
         margin-bottom: rem(5px);
+
+        line-height: rem(22px);
     }
 
     &__more {
@@ -77,5 +86,12 @@
         color: #717171;
         line-height: rem(20px);
         margin-left: rem(7px);
+    }
+
+    &__link {
+        transition: color 0.3s;
+        &:hover {
+            color: #FFC700;
+        }
     }
 }
