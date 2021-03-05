@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="./dist/css/styles.css">
+
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+</head>
+<body>
+    
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__wrapper">
+                    <div class="header__logo">
+                        <div class="logo">
+                            <div class="logo__inner">
+                                <a href="" class="logo__link">
+                                    <img src="./dist/images/logo.png" alt="ХотьДог" class="logo__image">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="header__shopping">
+                        <div class="header__cart">
+                            <div class="mini-cart">
+                                <a href="/cart.html" class="mini-cart__link">
+                                    <div class="mini-cart__image">
+                                        <img src="./dist/images/svg/cart.svg" alt="Корзина">
+                                    </div>
+                                    <div class="mini-cart__counter">3</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="header__personal">
+                            <div class="mini-personal">
+                                <a href="./personal" class="mini-personal__link">
+                                    <div class="mini-personal__image">
+                                        <img src="./dist/images/svg/presonal.svg" alt="Личный кабинет">
+                                    </div>
+                                </a>
+
+                                <div class="mini-personal__tooltip">
+                                    <div class="mini-personal__inner">
+                                        <div class="mini-personal__user">
+                                            <div class="mini-user">
+                                                <div class="mini-user__icon">
+                                                    <!-- <div class="user-icon">
+                                                        <img src="./dist/images/svg/profile-1.svg" alt="Профиль-1">
+                                                    </div> -->
+                                                    <div class="user-icon user-icon--char">A</div>
+                                                </div>
+                                                <div class="mini-user__row">
+                                                    <div class="mini-user__name">Алексей</div>
+                                                    <div class="mini-user__mail">nos.tth@mail.ru</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="mini-personal__menu">
+                                            <nav class="personal-menu">
+                                                <ul>
+                                                    <li>
+                                                        <a href="/personal.html">Мой кабинет</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/personal-edit.html">Личные данные</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/personal-order.html">Мои заказы</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/personal-sale">Акция "Наклейка на авто"</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/logout" class="personal-logout">Выход</a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                    <div class="mini-personal__tip"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="content">
+            <section class="section section-personal">
+                <div class="container">
+                    <h1 class="section__title">Личный кабинет</h1>
+
+                    <div class="personal">
+                        <div class="personal__sidebar">
+                            <div class="personal-bubble personal-bubble--not-hover">
+                                <div class="personal__icon">
+                                    <!-- <div class="user-icon">
+                                        <img src="./dist/images/svg/profile-1.svg" alt="Профиль-1">
+                                    </div> -->
+                                    <div class="user-icon user-icon--char">A</div>
+                                </div>
+                                <div class="personal__welcome">Добро пожаловать,</div>
+                                <div class="personal__name">Алексей!</div>
+                                <div class="personal__mail"><a href="mailto:nos.tth@mail.ru">nos.tth@mail.ru</a></div>
+                                <div class="personal__phone"><a href="tel:89829324236">8 (982) 932 42 36</a></div>
+                            </div>
+                        </div>
+                        <div class="personal__content">
+                            <div class="personal__list">
+                                <div class="personal__branch">
+                                    <div class="personal-bubble personal-bubble--has-icon" style="background-image: url('./dist/images/svg/bubble-edit.svg');">
+                                        <div class="personal-bubble__title">Личные данные</div>
+                                        <a href="#" class="personal-bubble__more">Подробнее</a>
+                                    </div>
+                                </div>
+                                <div class="personal__branch">
+                                    <div class="personal-bubble personal-bubble--has-icon">
+                                        <div class="personal-bubble__title">Мои заказы</div>
+                                        <a href="#" class="personal-bubble__more">Подробнее</a>
+                                    </div>
+                                </div>
+                                <div class="personal__branch">
+                                    <div class="personal-bubble personal-bubble--has-icon">
+                                        <div class="personal-bubble__title">Акция "Наклейка на авто"</div>
+                                        <a href="#" class="personal-bubble__more">Подробнее</a>
+                                    </div>
+                                </div>
+                                <div class="personal__branch">
+                                    <div class="personal-bubble personal-bubble--has-icon">
+                                        <div class="personal-bubble__title">Активные заказы</div>
+                                        <a href="#" class="personal-bubble__more">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__wrapper">
+                    <div class="footer__menu">
+                        <nav class="menu">
+                            <ul>
+                                <li><a href="#">Ингридиенты</a></li>
+                                <li><a href="#">О продукте</a></li>
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">Отзывы</a></li>
+                                <li><a href="#">Где купить</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="footer__social-menu">
+                        <nav class="social-menu">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <img src="./dist/images/svg/instagram-1.svg" alt="instagram">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="./dist/images/svg/vk-1.svg" alt="vk">
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="./dist/js/scripts.min.js"></script>
+
+    <div class="modal-overlay modal-overlay--blur"></div>
+    <div class="modal" data-target-id="some-modal-1">
+        <div class="modal__header">
+            <div class="modal__title">Заголовок модального окна 1</div>
+            <div class="modal__close js-modal-close">x</div>
+        </div>
+        <div class="modal__body">
+            <a href="" data-target="some-modal-2" class="js-open-modal">Открыть модальное окно 2</a>
+        </div>
+        <div class="modal__footer">
+            <button class="button js-modal-close">Закрыть</button>
+        </div>
+    </div>
+    <div class="modal" data-target-id="some-modal-2">
+        <div class="modal__header">
+            <div class="modal__title">Заголовок модального окна 2</div>
+            <div class="modal__close js-modal-close">x</div>
+        </div>
+        <div class="modal__body">
+            <a href="" data-target="some-modal-1" class="js-open-modal">Открыть модальное окно 1</a>
+        </div>
+        <div class="modal__footer">
+            <button class="button js-modal-close">Закрыть</button>
+        </div>
+    </div>
+</body>
+</html>
