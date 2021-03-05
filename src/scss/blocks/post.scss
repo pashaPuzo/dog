@@ -1,0 +1,42 @@
+.post {
+    &__title {
+        font-weight: 700;
+        font-size: rem(35px);
+        text-align: center;
+
+        color: #313131;
+
+        margin-bottom: rem(7px);
+    }
+
+    &__date {
+        font-size: rem(16px);
+        text-align: center;
+        color: #717171;
+        margin-bottom: rem(20px);
+    }
+
+    &__preview {
+        border-radius: rem(10px);
+        overflow: hidden;
+        margin-bottom: rem(25px);
+    }
+
+    &__inner {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__content {
+        flex: 0 1 auto;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    &__sidebar {
+        flex: 0 0 rem(370px);
+        max-width: rem(370px);
+        width: 100%;
+        margin-left: rem(30px);
+    }
+}

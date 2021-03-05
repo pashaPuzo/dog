@@ -1,0 +1,36 @@
+.main-personal-menu ul {
+    text-align: center;
+}
+
+.main-personal-menu ul a {
+    display: block;
+    padding: rem(17px) 0 rem(18px);
+    border-radius: 10px;
+    background-color: transparent;
+    -webkit-transition: background-color 0.3s, color 0.3s;
+    -o-transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: 700;
+    font-size: rem(12px);
+    color: #A2A2A2;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.main-personal-menu ul a:hover {
+    background-color: #FFC700;
+    color: #313131;
+}
+
+.main-personal-menu ul li {
+    margin-bottom: rem(10px);
+}
+
+.main-personal-menu ul li:last-of-type {
+    margin-bottom: 0;
+}
+
+.main-personal-menu ul li.active a {
+    background-color: #FFC700;
+    color: #313131;
+}

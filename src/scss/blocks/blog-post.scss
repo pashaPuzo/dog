@@ -1,0 +1,82 @@
+.blog-post {
+    display: flex;
+    flex-direction: column;
+    &__image {
+        background-color: #C4C4C4;
+        border-radius: rem(10px);
+        position: relative;
+        height: rem(245px);
+        overflow: hidden;
+
+        margin-bottom: rem(20px);
+        img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 100%;
+            height: 100%;
+            transform: translate(-50%, -50%) scale(1);
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        &:hover {
+            img {
+                transform: translate(-50%, -50%) scale(1.1);
+            }
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: rem(20px);
+        color: #313131;
+
+        margin-bottom: rem(10px);
+    }
+
+    &__link {
+        transition: color 0.3s;
+        &:hover {
+            color: #FFC700;
+        }
+    }
+
+    &__excerpt {
+        font-weight: 400;
+        font-size: rem(14px);
+        color: #313131;
+        margin-top: auto;
+    }
+
+    &__more {
+        margin-top: rem(15px);
+        display: inline-block;
+        font-weight: 700;
+        font-size: rem(10px);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: #717171;
+        line-height: rem(20px);
+        transition: color 0.3s;
+        vertical-align: middle;
+
+        &::after {
+            content: "";
+            display: inline-block;
+            width: rem(18px);
+            height: rem(18px);
+            vertical-align: middle;
+            background-color: #FFC700;
+            margin-left: rem(7px);
+
+            border-radius: 50%;
+            transition: background 0.3s;
+
+            background-image: url('../images/svg/angle-more.svg');
+            background-position: center center;
+            background-size: rem(5.8px);
+            background-repeat: no-repeat;
+        }
+    }
+}

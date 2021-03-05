@@ -1,0 +1,34 @@
+.pagination {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.pagination__item {
+    display: inline-block;
+    vertical-align: middle;
+    width: rem(50px);
+    height: rem(50px);
+    border-radius: 50%;
+    background-color: transparent;
+    text-align: center;
+    font-size: rem(18px);
+    color: #3F3D4A;
+    line-height: rem(50px);
+}
+
+.pagination__item--active {
+    background-color: #FFC700;
+    color: #ffffff;
+}
+
+.pagination__item--prev img {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 auto;
+}
+
+.pagination__item--next img {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 auto;
+}

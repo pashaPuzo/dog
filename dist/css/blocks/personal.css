@@ -32,6 +32,10 @@
     margin-right: rem(30px);
 }
 
+.personal__sidebar .personal-bubble {
+    padding: rem(30px) rem(20px) rem(25px);
+}
+
 .personal__welcome {
     font-size: rem(13px);
     font-weight: 600;
@@ -78,4 +82,8 @@
     max-width: calc(50% - 30px);
     width: 100%;
     margin: 0 rem(15px) rem(20px);
+}
+
+.personal__menu {
+    margin-top: rem(15px);
 }

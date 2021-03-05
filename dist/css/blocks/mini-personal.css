@@ -19,6 +19,7 @@
     -o-transition: 0.3s opacity, 0.2s transform, visibility 0.4s;
     transition: 0.3s opacity, 0.2s transform, visibility 0.4s;
     transition: 0.3s opacity, 0.2s transform, visibility 0.4s, 0.2s -webkit-transform;
+    z-index: 10;
 }
 
 .mini-personal__inner {

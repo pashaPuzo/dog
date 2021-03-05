@@ -1,0 +1,14 @@
+.listing {
+    display: flex;
+    flex-wrap: wrap;
+    &--blog {
+        margin: 0 rem(-15px) rem(65px);
+        .listing {
+            &__item {
+                flex: 0 0 calc(100% / 3 - 30px);
+                max-width: calc(100% / 3 - 30px);
+                margin: 0 rem(15px) rem(30px);
+            }
+        }
+    }
+}

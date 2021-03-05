@@ -15,6 +15,7 @@
         opacity: 0;
 
         transition: 0.3s opacity, 0.2s transform, visibility 0.4s;
+        z-index: 10;
     }
 
     &__inner {

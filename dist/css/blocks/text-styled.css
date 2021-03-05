@@ -1,0 +1,38 @@
+.text-styled {
+    font-size: rem(18px);
+    color: #000000;
+}
+
+.text-styled p {
+    margin-bottom: rem(25px);
+}
+
+.text-styled h3 {
+    font-weight: 700;
+    font-size: rem(25px);
+    color: #313131;
+    margin-bottom: rem(15px);
+}
+
+.text-styled ul {
+    padding-left: rem(5px);
+    margin-bottom: rem(15px);
+}
+
+.text-styled ul li {
+    position: relative;
+}
+
+.text-styled ul li::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: rem(6px);
+    height: rem(6px);
+    background-color: #FFC700;
+    margin-right: rem(20px);
+    border-radius: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}

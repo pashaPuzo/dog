@@ -21,6 +21,10 @@
         flex: 0 0 rem(270px);
         text-align: center;
         margin-right: rem(30px);
+
+        .personal-bubble {
+            padding: rem(30px) rem(20px) rem(25px);
+        }
     }
 
     &__welcome {
@@ -61,5 +65,9 @@
         max-width: calc(50% - 30px);
         width: 100%;
         margin: 0 rem(15px) rem(20px);
+    }
+
+    &__menu {
+        margin-top: rem(15px);
     }
 }

@@ -1,0 +1,15 @@
+.last-posts {
+
+    &__title {
+        font-weight: 700;
+        font-size: rem(22px);
+        color: #313131;
+
+        margin-bottom: rem(15px);
+    }
+    .listing {
+        &__item {
+            margin-bottom: rem(20px);
+        }
+    }
+}

@@ -19,13 +19,15 @@
 
 
     &__more {
+        display: inline-block;
+        vertical-align: middle;
         font-weight: 700;
         font-size: rem(10px);
         text-transform: uppercase;
         letter-spacing: 0.05em;
         color: #717171;
 
-        line-height: rem(17px);
+        line-height: rem(20px);
         transition: color 0.3s;
 
         &::after {
