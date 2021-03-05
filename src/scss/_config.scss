@@ -1,16 +1,27 @@
 @import "./mixins";
 
-// @include font('Gotham Pro', 'normal', 'normal', '../fonts/GothamPro.woff2');
-// @include font('Gotham Pro', 'normal', 'bold', '../fonts/GothamPro-Bold.woff2');
+@include font('SegoeUI', 'normal', 400, '../fonts/SegoeUI/SegoeUI.woff2');
+@include font('SegoeUI', 'normal', 600, '../fonts/SegoeUI/SegoeUI-SemiBold.woff2');
+@include font('SegoeUI', 'normal', 700, '../fonts/SegoeUI/SegoeUI-Bold.woff2');
+@include font('Souvenir', 'normal', 'bold', '../fonts/Souvenir/Souvenir-Bold.woff2');
 
-$userFontMain: "Roboto";
+// Segoe UI:
+    // 700 - bold
+    // 600 - semibold
+    // 400 - regular
+// Souvenir:
+    // 700 - bold
+
+
+
+$userFontMain: "SegoeUI";
 $fonts: $userFontMain, system-ui, -apple-system, "Segoe UI", Roboto,
   "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
   "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
 $fontsize: rem(16px);
 $textcolor: #274341;
-$accent: #FC5130;
+$accent: #FFC700;
 
 ::placeholder {
   color: #666;
@@ -35,6 +46,8 @@ html {
   min-width: rem(320px);
   position: relative;
   height: 100%;
+
+  background-color: #F5F5F5;
 }
 
 .container {
@@ -75,6 +88,8 @@ html {
   flex-grow: 1;
   flex-shrink: 0;
   flex-basis: auto;
+
+  padding-top: rem(11px);
 }
 
 footer.footer {

@@ -1,0 +1,29 @@
+.menu {
+    text-align: center;
+    ul {
+        /* display: flex;
+        align-items: center;
+        justify-content: space-evenly; */
+
+        margin: 0 rem(-45px);
+        li {
+            margin: 0 rem(45px);
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        a {
+            font-weight: 700;
+            font-size: rem(12px);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #999999;
+
+            transition: color 0.3s;
+
+            &:hover {
+                color:#FFC700;
+            }
+        }
+    }
+}

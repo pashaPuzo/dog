@@ -1,0 +1,71 @@
+.personal-bubble {
+    padding: rem(43px) rem(39px) rem(39px);
+    background: #FFFFFF;
+    -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    -webkit-transition: background 0.3s;
+    -o-transition: background 0.3s;
+    transition: background 0.3s;
+}
+
+.personal-bubble__title {
+    font-weight: 700;
+    font-size: rem(25px);
+    color: #101010;
+    margin-bottom: rem(13px);
+    -webkit-transition: color 0.3s;
+    -o-transition: color 0.3s;
+    transition: color 0.3s;
+}
+
+.personal-bubble__more {
+    font-weight: 700;
+    font-size: rem(10px);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #717171;
+    line-height: rem(17px);
+    -webkit-transition: color 0.3s;
+    -o-transition: color 0.3s;
+    transition: color 0.3s;
+}
+
+.personal-bubble__more::after {
+    content: "";
+    display: inline-block;
+    width: rem(18px);
+    height: rem(18px);
+    vertical-align: middle;
+    background-color: #FFC700;
+    margin-left: rem(7px);
+    border-radius: 50%;
+    -webkit-transition: background 0.3s;
+    -o-transition: background 0.3s;
+    transition: background 0.3s;
+    background-image: url("../images/svg/angle-more.svg");
+    background-position: center center;
+    background-size: rem(5.8px);
+    background-repeat: no-repeat;
+}
+
+.personal-bubble--has-icon {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: right;
+}
+
+.personal-bubble:not(.personal-bubble--not-hover):hover {
+    background-color: #FFC700;
+    background-image: none !important;
+}
+
+.personal-bubble:not(.personal-bubble--not-hover):hover .personal-bubble__more,
+.personal-bubble:not(.personal-bubble--not-hover):hover .personal-bubble__title {
+    color: #ffffff;
+}
+
+.personal-bubble:not(.personal-bubble--not-hover):hover .personal-bubble__more::after {
+    background-color: #ffffff;
+    background-image: url("../images/svg/angle-more-hover.svg");
+}

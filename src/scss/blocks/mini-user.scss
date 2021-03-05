@@ -1,0 +1,35 @@
+.mini-user {
+    display: flex;
+    text-align: left;
+
+    &__icon {
+        flex: 0 0 rem(45px);
+        margin-right: rem(10px);
+        .user-icon {
+            max-width: rem(45px);
+            width: 100%;
+            height: rem(45px);
+        }
+    }
+
+    &__name {
+        font-weight: 700;
+        font-size: rem(16px);
+        color: #101010;
+        line-height: rem(25px);
+    }
+
+    &__mail {
+        margin-top: rem(-1.1px);
+        font-weight: 600;
+        font-size: rem(12px);
+
+        color: #C4C4C4;
+    }
+
+    &__row {
+        flex: 0 1 auto;
+        max-width: 100%;
+        width: 100%;
+    }
+}
