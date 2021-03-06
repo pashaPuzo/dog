@@ -12,6 +12,13 @@
         margin-bottom: rem(15px);
     }
 
+    h4 {
+        font-weight: 700;
+        font-size: rem(20px);
+        color: #101010;
+        margin-bottom: rem(20px);
+    }
+
     ul {
         padding-left: rem(5px);
         margin-bottom: rem(15px);
@@ -28,6 +35,24 @@
 
                 border-radius: 50%;
                 transform: translateY(-50%);
+            }
+        }
+
+        &.beautiful-list {
+            li {
+                padding-left: rem(22px);
+                position: relative;
+                &::before {
+                    position: absolute;
+                    left: 0;
+                    top: rem(13px);
+                    width: rem(12px);
+                    height: rem(12px);
+
+                    background-size: rem(12px);
+                    background-image: url('../images/svg/beautiful-list.svg');
+                    background-color: transparent;
+                }
             }
         }
     }

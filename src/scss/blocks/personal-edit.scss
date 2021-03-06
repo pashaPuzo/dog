@@ -1,0 +1,18 @@
+.personal-edit {
+    .form-group {
+        max-width: rem(375px);
+
+        margin-bottom: rem(15px);
+
+        &__row {
+            align-items: flex-end;
+
+            .button {
+                flex: 0 0 rem(112px);
+                max-width: rem(112px);
+                margin-left: rem(10px);
+            }
+        }
+    }
+
+}

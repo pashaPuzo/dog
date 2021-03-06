@@ -1,0 +1,15 @@
+.form-group {
+    &__title {
+        font-weight: 700;
+        font-size: rem(8px);
+        letter-spacing: 0.05em;
+        color: #A1A1A1;        
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+    }
+}

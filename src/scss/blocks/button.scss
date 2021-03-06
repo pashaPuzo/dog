@@ -1,11 +1,27 @@
 .button {
     display: inline-block;
+    padding: rem(13px) rem(20px) rem(15px);
+    text-align: center;
+    font-weight: 700;
+    font-size: rem(12px);
+    border-radius: 10px;
+    overflow: hidden;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
     cursor: pointer;
 
-    padding: rem(11px) 0 rem(12px);
+    &--yellow {
+        background-color: #FFC700;
+        color: #ffffff;
+    }
 
-    &--orange {
-        background-color: #FC5130;
-        color: #FFFFFF;
+    &--gray {
+        background-color: #F7F7F7;
+        color: #A1A1A1;
+    }
+
+    &--black {
+        background-color: #101010;
+        color: #ffffff;
     }
 }

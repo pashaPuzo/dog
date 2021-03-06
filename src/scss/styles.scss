@@ -2,6 +2,7 @@
 @import "../../node_modules/css-reset-and-normalize/scss/link-reset.scss";
 @import "../../node_modules/css-reset-and-normalize/scss/reset-and-normalize.scss";
 @import "../../node_modules/sass-rem/rem";
+@import "../../node_modules/simplebar/src/simplebar.css";
 
 @import "./config";
 @import "./libs/libs";
@@ -11,4 +12,12 @@
 img {
     display: block;
     max-width: 100%;
+}
+
+.simplebar-scrollbar::before {
+    background: #FFC700;
+}
+
+.simplebar-scrollbar.simplebar-visible::before {
+    opacity: 1;
 }

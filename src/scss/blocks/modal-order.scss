@@ -1,0 +1,72 @@
+.modal-order {
+    max-width: rem(425px);
+
+    .modal {
+        &__title {
+            font-weight: 700;
+            font-size: rem(15px);
+            text-align: center;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #101010;
+        }
+
+        &__header {
+            padding-top: rem(23px);
+
+            margin-bottom: rem(35px);
+        }
+
+        &__close {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        &__footer {
+            padding-top: rem(15px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            .button {
+                margin-right: rem(15px);
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &__info {
+            margin-top: rem(25px);
+            flex: 0 0 100%;
+            width: 100%;
+            text-align: center;
+            font-weight: 700;
+            font-size: rem(10px);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #000000;
+        }
+    }
+
+    .input-group {
+        margin-bottom: rem(15px);
+    }
+
+    .input-radio {
+        margin-right: rem(15px);
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+
+    .form-group {
+        margin-bottom: rem(15px);
+    }
+
+    .input-checkbox {
+        margin-bottom: rem(15px);
+    }
+}

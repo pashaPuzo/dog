@@ -5,7 +5,7 @@ class Modal {
             modal_active: "modal--active",
             modal_overlay: "modal-overlay",
             modal_overlay_active: "modal-overlay--active",
-            modal_open: "js-open-modal",
+            modal_open: "js-modal-open",
             modal_close: "js-modal-close",
 
             modal_current: false,

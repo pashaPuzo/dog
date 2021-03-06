@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Модальные окна</title>
+    <link rel="stylesheet" href="../../dist/css/styles.css">
+
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+</head>
+<body>
+    
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__wrapper">
+                    <div class="header__logo">
+                        <div class="logo">
+                            <div class="logo__inner">
+                                <a href="" class="logo__link">
+                                    <img src="../../dist/images/logo.png" alt="ХотьДог" class="logo__image">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="header__shopping">
+                        <div class="header__cart">
+                            <div class="mini-cart">
+                                <a href="/cart.html" class="mini-cart__link">
+                                    <div class="mini-cart__image">
+                                        <img src="../../dist/images/svg/cart.svg" alt="Корзина">
+                                    </div>
+                                    <div class="mini-cart__counter">3</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="header__personal">
+                            <div class="mini-personal">
+                                <a href="./personal" class="mini-personal__link">
+                                    <div class="mini-personal__image">
+                                        <img src="../../dist/images/svg/presonal.svg" alt="Личный кабинет">
+                                    </div>
+                                </a>
+
+                                <div class="mini-personal__tooltip">
+                                    <div class="mini-personal__inner">
+                                        <div class="mini-personal__user">
+                                            <div class="mini-user">
+                                                <div class="mini-user__icon">
+                                                    <!-- <div class="user-icon">
+                                                        <img src="../../dist/images/svg/profile-1.svg" alt="Профиль-1">
+                                                    </div> -->
+                                                    <div class="user-icon user-icon--char">A</div>
+                                                </div>
+                                                <div class="mini-user__row">
+                                                    <div class="mini-user__name">Алексей</div>
+                                                    <div class="mini-user__mail">nos.tth@mail.ru</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="mini-personal__menu">
+                                            <nav class="personal-menu">
+                                                <ul>
+                                                    <li>
+                                                        <a href="/personal.html">Мой кабинет</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/personal-edit.html">Личные данные</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/personal-order.html">Мои заказы</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/personal-sale">Акция "Наклейка на авто"</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/logout" class="personal-logout">Выход</a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                    <div class="mini-personal__tip"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="content">
+            <section class="section section-modals">
+                <div class="container">
+                    <h1 class="section__title">Модальные окна</h1>
+
+                    <div class="modal-btns">
+                        <button class="button button--yellow js-modal-open" data-target="order">Оформление заказа</button>
+                        <button class="button button--yellow js-modal-open" data-target="success">Успешная отправка форм</button>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__wrapper">
+                    <div class="footer__menu">
+                        <nav class="menu">
+                            <ul>
+                                <li><a href="#">Ингридиенты</a></li>
+                                <li><a href="#">О продукте</a></li>
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">Отзывы</a></li>
+                                <li><a href="#">Где купить</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="footer__social-menu">
+                        <nav class="social-menu">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <img src="../../dist/images/svg/instagram-1.svg" alt="instagram">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="../../dist/images/svg/vk-1.svg" alt="vk">
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="../../dist/js/scripts.min.js"></script>
+
+    <div class="modal-overlay modal-overlay--blur"></div>
+    <div class="modal modal-order" data-target-id="order">
+        <form class="modal__inner" class="js-form-submit">
+            <div class="modal__header">
+                <div class="modal__close js-modal-close">
+                    <svg width="13" height="13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.645 6.5l4.022-4.021a1.137 1.137 0 000-1.609L12.13.334a1.137 1.137 0 00-1.609 0L6.5 4.356 2.48.333a1.137 1.137 0 00-1.609 0L.333.87a1.137 1.137 0 000 1.609L4.356 6.5.334 10.522a1.137 1.137 0 000 1.609l.536.536a1.137 1.137 0 001.609 0L6.5 8.645l4.022 4.022a1.137 1.137 0 001.609 0l.536-.536a1.137 1.137 0 000-1.609L8.645 6.5z" fill="#A1A1A1"/>
+                    </svg>
+                </div>
+                <div class="modal__title">Оформление заказа</div>
+            </div>
+            <div class="modal__body" data-simplebar>
+                <div class="input-group">
+                    <input type="text" class="js-validate" data-type="required" placeholder="Введите имя">
+                </div>
+                <div class="input-group">
+                    <input type="email" class="js-validate" data-type="mail" placeholder="Введите E-mail">
+                </div>
+                <div class="input-group">
+                    <input type="tel" class="js-validate" data-type="phone" placeholder="Введите телефон">
+                </div>
+
+                <div class="form-group">
+                    <div class="form-group__title">Способ доставки</div>
+                    <div class="form-group__row">
+                        <div class="input-radio">
+                            <input id="delivery-1" type="radio" name="delivery" value="" checked>
+                            <label for="delivery-1" class="input-radio__label">
+                                <span>Пункт выдачи</span>
+                            </label>
+                        </div>
+                        <div class="input-radio">
+                            <input id="delivery-2" type="radio" name="delivery" value="">
+                            <label for="delivery-2" class="input-radio__label">
+                                <span>При получении</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <input type="text" placeholder="Введите адрес">
+                </div>
+
+                <div class="form-group">
+                    <div class="form-group__title">Форма оплаты</div>
+                    <div class="form-group__row">
+                        <div class="input-radio">
+                            <input id="payment_type-1" type="radio" name="payment_type" value="" checked>
+                            <label for="payment_type-1" class="input-radio__label">
+                                <span>Онлайн</span>
+                            </label>
+                        </div>
+                        <div class="input-radio">
+                            <input id="payment_type-2" type="radio" name="payment_type" value="">
+                            <label for="payment_type-2" class="input-radio__label">
+                                <span>При получении</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-checkbox">
+                    <input id="agreement" type="checkbox" name="agreement" value="">
+                    <label for="agreement" class="input-checkbox__label">
+                        <span>СОГЛАСИЕ НА ОБРАБОТКУ ПЕРСОНАЛЬНЫХ ДАННЫХ</span>
+                    </label>
+                </div>
+
+                <div class="input-checkbox">
+                    <input id="register" type="checkbox" name="register" value="">
+                    <label for="register" class="input-checkbox__label">
+                        <span>Зарегистрироваться</span>
+                    </label>
+                </div>
+                
+
+            </div>
+            <div class="modal__footer">
+                <button type="submit" class="button button--yellow">Отправить заказ</button>
+                <button type="button" class="button button--gray js-modal-close">Назад</button>
+    
+                <p class="modal__info">Гарантируем безопасность ваших данных</p>
+            </div>
+        </form>
+    </div>
+    <div class="modal modal-success" data-target-id="success">
+        <div class="modal__inner">
+            <div class="modal__header">
+                <div class="modal__close js-modal-close">
+                    <svg width="13" height="13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.645 6.5l4.022-4.021a1.137 1.137 0 000-1.609L12.13.334a1.137 1.137 0 00-1.609 0L6.5 4.356 2.48.333a1.137 1.137 0 00-1.609 0L.333.87a1.137 1.137 0 000 1.609L4.356 6.5.334 10.522a1.137 1.137 0 000 1.609l.536.536a1.137 1.137 0 001.609 0L6.5 8.645l4.022 4.022a1.137 1.137 0 001.609 0l.536-.536a1.137 1.137 0 000-1.609L8.645 6.5z" fill="#A1A1A1"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="modal__body">
+                <div class="form-success">
+                    <div class="form-success__icon">
+                        <img src="../../dist/images/svg/form-success.svg" alt="">
+                    </div>
+                    <div class="form-success__content">Ваш заказ успешно оформлен!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

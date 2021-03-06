@@ -14,6 +14,13 @@
     margin-bottom: rem(15px);
 }
 
+.text-styled h4 {
+    font-weight: 700;
+    font-size: rem(20px);
+    color: #101010;
+    margin-bottom: rem(20px);
+}
+
 .text-styled ul {
     padding-left: rem(5px);
     margin-bottom: rem(15px);
@@ -35,4 +42,20 @@
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+}
+
+.text-styled ul.beautiful-list li {
+    padding-left: rem(22px);
+    position: relative;
+}
+
+.text-styled ul.beautiful-list li::before {
+    position: absolute;
+    left: 0;
+    top: rem(13px);
+    width: rem(12px);
+    height: rem(12px);
+    background-size: rem(12px);
+    background-image: url("../images/svg/beautiful-list.svg");
+    background-color: transparent;
 }

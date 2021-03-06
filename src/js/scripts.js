@@ -11,6 +11,8 @@ import testWebP from "./libs/webp";
 
 import Modal from "./libs/modal"
 
+import "simplebar";
+
 // You code
 document.addEventListener("DOMContentLoaded", () => {
     /* Инит для SVG */
@@ -30,6 +32,16 @@ document.addEventListener("DOMContentLoaded", () => {
     let modal = new Modal;
 
     let body = $("body");
-    console.log('asdk');
+    
+    
+
+    body.on('click', '.js-input-group-edit', function () {
+        let parent = $(this).closest('.input-group--edit');
+        let button = parent.siblings('.button');
+
+        parent.toggleClass('active');
+        parent.find('input').prop('disabled', !parent.find('input').prop('disabled'));
+        parent.find('input').prop('readonly', !parent.find('input').prop('readonly'));
+    });
     
 });

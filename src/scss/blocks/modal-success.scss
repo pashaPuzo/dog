@@ -1,0 +1,31 @@
+.modal-success {
+    max-width: rem(370px);
+    .modal {
+        &__header {
+            padding-top: rem(23px);
+        }
+
+        &__close {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+}
+
+.form-success {
+    &__icon {
+        img {
+            margin: 0 auto;
+            margin-bottom: rem(20px);
+        }
+    }
+    &__content {
+        font-weight: 700;
+        font-size: rem(20px);
+        text-align: center;
+        color: #101010;
+
+        max-width: rem(255px);
+    }
+}

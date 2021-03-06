@@ -1,0 +1,80 @@
+.modal-order {
+    max-width: rem(425px);
+}
+
+.modal-order .modal__title {
+    font-weight: 700;
+    font-size: rem(15px);
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #101010;
+}
+
+.modal-order .modal__header {
+    padding-top: rem(23px);
+    margin-bottom: rem(35px);
+}
+
+.modal-order .modal__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.modal-order .modal__footer {
+    padding-top: rem(15px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.modal-order .modal__footer .button {
+    margin-right: rem(15px);
+}
+
+.modal-order .modal__footer .button:last-of-type {
+    margin-bottom: 0;
+}
+
+.modal-order .modal__info {
+    margin-top: rem(25px);
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    font-size: rem(10px);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.modal-order .input-group {
+    margin-bottom: rem(15px);
+}
+
+.modal-order .input-radio {
+    margin-right: rem(15px);
+}
+
+.modal-order .input-radio:last-of-type {
+    margin-right: 0;
+}
+
+.modal-order .form-group {
+    margin-bottom: rem(15px);
+}
+
+.modal-order .input-checkbox {
+    margin-bottom: rem(15px);
+}
