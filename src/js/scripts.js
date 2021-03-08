@@ -9,7 +9,8 @@ import svg4evrybody from "svg4everybody";
 import DynamicAdapt from "./libs/dynamic-adaptive";
 import testWebP from "./libs/webp";
 
-import Modal from "./libs/modal"
+import Modal from "./libs/modal";
+require('./libs/disabled-copy');
 
 import "simplebar";
 
