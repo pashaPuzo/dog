@@ -99,6 +99,8 @@
                     <div class="modal-btns">
                         <button class="button button--yellow js-modal-open" data-target="order">Оформление заказа</button>
                         <button class="button button--yellow js-modal-open" data-target="success">Успешная отправка форм</button>
+                        <button class="button button--yellow js-modal-open" data-target="empty-cart">Пустая корзина</button>
+                        <button class="button button--yellow js-modal-open" data-target="cart">Корзина с товарами</button>
                     </div>
                 </div>
             </section>
@@ -226,6 +228,140 @@
                 <button type="button" class="button button--gray js-modal-close">Назад</button>
     
                 <p class="modal__info">Гарантируем безопасность ваших данных</p>
+            </div>
+        </form>
+    </div>
+    <div class="modal modal-cart" data-target-id="empty-cart">
+        <form class="modal__inner cart cart--empty" class="js-form-submit">
+            <div class="cart__left"></div>
+            <div class="cart__right">
+                <div class="cart__header">
+                    <div class="modal__close js-modal-close">
+                        <svg width="13" height="13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.645 6.5l4.022-4.021a1.137 1.137 0 000-1.609L12.13.334a1.137 1.137 0 00-1.609 0L6.5 4.356 2.48.333a1.137 1.137 0 00-1.609 0L.333.87a1.137 1.137 0 000 1.609L4.356 6.5.334 10.522a1.137 1.137 0 000 1.609l.536.536a1.137 1.137 0 001.609 0L6.5 8.645l4.022 4.022a1.137 1.137 0 001.609 0l.536-.536a1.137 1.137 0 000-1.609L8.645 6.5z" fill="#A1A1A1"/>
+                        </svg>
+                    </div>
+                    <div class="modal__title">Корзина</div>
+                </div>
+                <div class="cart__body" data-simplebar>
+                </div>
+                <div class="cart__footer">
+                    <ul class="cart-result">
+                        <li class="cart-result__item">Стоимость заказа <span class="cart-result__price">0 ₽</span></li>
+                        <li class="cart-result__item">Доставка <span class="cart-result__price">0 ₽</span></li>
+                        <li class="cart-result__item cart-result__item--total">Итого <span class="cart-result__price">0 ₽</span></li>
+                    </ul>
+    
+                    <button type="button" class="button button--gray" disabled>Оформить заказ</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal modal-cart" data-target-id="cart">
+        <form class="modal__inner cart" class="js-form-submit">
+            <div class="cart__left"></div>
+            <div class="cart__right">
+                <div class="cart__header">
+                    <div class="modal__close js-modal-close">
+                        <svg width="13" height="13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.645 6.5l4.022-4.021a1.137 1.137 0 000-1.609L12.13.334a1.137 1.137 0 00-1.609 0L6.5 4.356 2.48.333a1.137 1.137 0 00-1.609 0L.333.87a1.137 1.137 0 000 1.609L4.356 6.5.334 10.522a1.137 1.137 0 000 1.609l.536.536a1.137 1.137 0 001.609 0L6.5 8.645l4.022 4.022a1.137 1.137 0 001.609 0l.536-.536a1.137 1.137 0 000-1.609L8.645 6.5z" fill="#A1A1A1"/>
+                        </svg>
+                    </div>
+                    <div class="modal__title">Корзина</div>
+                </div>
+                <div class="cart__body" data-simplebar>
+                    <div class="cart__list">
+                        <div class="cart__item">
+                            <div class="product-cart" style="background-image: url('../../dist/images/product-cart.png');">
+                                <div class="product-cart__left">
+                                    <div class="product-cart__title"><a href="#">Быстрокаша ХотьДог 2.5 кг</a></div>
+                                    <div class="product-cart__price">1800 ₽</div>
+                                </div>
+                                <div class="product-cart__right">
+                                    <div class="qty" data-step="1" data-price="1800" data-min="1" data-max="999">
+                                        <div class="qty__row">
+                                            <button type="button" class="qty__btn qty__btn--minus"></button>
+                                            <input type="number" class="qty__input" value="2">
+                                            <button type="button" class="qty__btn qty__btn--plus"></button>
+                                        </div>
+                                        <div class="qty__row">
+                                            <div class="qty__result">3600 ₽</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart__item">
+                            <div class="product-cart" style="background-image: url('../../dist/images/product-cart.png');">
+                                <div class="product-cart__left">
+                                    <div class="product-cart__title"><a href="#">Быстрокаша ХотьДог 2.5 кг</a></div>
+                                    <div class="product-cart__price">1800 ₽</div>
+                                </div>
+                                <div class="product-cart__right">
+                                    <div class="qty" data-step="1" data-price="1800" data-min="1" data-max="999">
+                                        <div class="qty__row">
+                                            <button type="button" class="qty__btn qty__btn--minus"></button>
+                                            <input type="number" class="qty__input" value="2">
+                                            <button type="button" class="qty__btn qty__btn--plus"></button>
+                                        </div>
+                                        <div class="qty__row">
+                                            <div class="qty__result">3600 ₽</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart__item">
+                            <div class="product-cart" style="background-image: url('../../dist/images/product-cart.png');">
+                                <div class="product-cart__left">
+                                    <div class="product-cart__title"><a href="#">Быстрокаша ХотьДог 2.5 кг</a></div>
+                                    <div class="product-cart__price">1800 ₽</div>
+                                </div>
+                                <div class="product-cart__right">
+                                    <div class="qty" data-step="1" data-price="1800" data-min="1" data-max="999">
+                                        <div class="qty__row">
+                                            <button type="button" class="qty__btn qty__btn--minus"></button>
+                                            <input type="number" class="qty__input" value="2">
+                                            <button type="button" class="qty__btn qty__btn--plus"></button>
+                                        </div>
+                                        <div class="qty__row">
+                                            <div class="qty__result">3600 ₽</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart__item">
+                            <div class="product-cart" style="background-image: url('../../dist/images/product-cart.png');">
+                                <div class="product-cart__left">
+                                    <div class="product-cart__title"><a href="#">Быстрокаша ХотьДог 2.5 кг</a></div>
+                                    <div class="product-cart__price">1800 ₽</div>
+                                </div>
+                                <div class="product-cart__right">
+                                    <div class="qty" data-step="1" data-price="1800" data-min="1" data-max="999">
+                                        <div class="qty__row">
+                                            <button type="button" class="qty__btn qty__btn--minus"></button>
+                                            <input type="number" class="qty__input" value="2">
+                                            <button type="button" class="qty__btn qty__btn--plus"></button>
+                                        </div>
+                                        <div class="qty__row">
+                                            <div class="qty__result">3600 ₽</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart__footer">
+                    <ul class="cart-result">
+                        <li class="cart-result__item">Стоимость заказа <span class="cart-result__price">14400 ₽</span></li>
+                        <li class="cart-result__item">Доставка <span class="cart-result__price">300 ₽</span></li>
+                        <li class="cart-result__item cart-result__item--total">Итого <span class="cart-result__price">14700 ₽</span></li>
+                    </ul>
+    
+                    <button type="button" class="button button--yellow">Оформить заказ</button>
+                </div>
             </div>
         </form>
     </div>

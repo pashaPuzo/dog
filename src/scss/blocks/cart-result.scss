@@ -1,0 +1,32 @@
+.cart-result {
+    &__price {
+        font-weight: 700;
+        font-size: rem(12px);
+        text-align: right;
+        letter-spacing: 0.05em;
+        color: #101010;
+        text-transform: uppercase;      
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        font-weight: 700;
+        font-size: rem(10px);
+        letter-spacing: 0.05em;
+        color: #A1A1A1;
+        text-transform: uppercase;
+        margin-bottom: rem(3px);
+        &--total {
+            color: #101010;
+            font-size: rem(14px);
+            .cart-result {
+                &__price {
+                    font-size: rem(14px);        
+                }
+            }
+        }
+    }
+}

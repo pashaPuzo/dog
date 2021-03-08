@@ -10,9 +10,11 @@ import DynamicAdapt from "./libs/dynamic-adaptive";
 import testWebP from "./libs/webp";
 
 import Modal from "./libs/modal";
-require('./libs/disabled-copy');
+import qty from "./libs/qty";
+// require('./libs/disabled-copy');
 
 import "simplebar";
+
 
 // You code
 document.addEventListener("DOMContentLoaded", () => {
@@ -32,9 +34,15 @@ document.addEventListener("DOMContentLoaded", () => {
     /* Инит модалок */
     let modal = new Modal;
 
+    /* Модуль кол-ва шт */
+    qty('.qty', ( result, block ) => {
+        if ( result && block ) {
+            let price = `${result} ₽`;
+            block.querySelector('.qty__result').innerHTML = price;
+        }
+    });
+
     let body = $("body");
-    
-    
 
     body.on('click', '.js-input-group-edit', function () {
         let parent = $(this).closest('.input-group--edit');

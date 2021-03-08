@@ -76,6 +76,15 @@
     overflow-y: auto;
 }
 
+.modal__title {
+    font-weight: 700;
+    font-size: 0.9375rem;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #101010;
+}
+
 .js-modal-open svg,
 .js-modal-close svg {
     pointer-events: none;

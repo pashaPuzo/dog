@@ -69,6 +69,15 @@
         max-height: 65vh;
         overflow-y: auto;
     }
+
+    &__title {
+        font-weight: 700;
+        font-size: 0.9375rem;
+        text-align: center;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #101010;
+    }
 }
 
 
