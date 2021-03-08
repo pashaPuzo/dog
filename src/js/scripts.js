@@ -11,7 +11,7 @@ import testWebP from "./libs/webp";
 
 import Modal from "./libs/modal";
 import qty from "./libs/qty";
-// require('./libs/disabled-copy');
+require('./libs/disabled-copy');
 
 import "simplebar";
 
