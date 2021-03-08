@@ -1,0 +1,92 @@
+.tabs {
+    &__nav {
+        margin: 0 rem(-10px);
+        li {
+            display: inline-block;
+            padding: rem(13px) rem(20px) rem(15px);
+            text-align: center;
+            font-weight: 700;
+            font-size: rem(12px);
+            border-radius: rem(10px);
+            overflow: hidden;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            cursor: pointer;
+            margin: 0 rem(10px);
+            background-color: #F7F7F7;
+            color: #A1A1A1;
+
+            transition: all 0.3s;
+
+            &:hover,
+            &.active {
+                background-color: #FFC700;
+                color: #ffffff;
+            }
+        }
+    }
+
+    &__header {
+        margin-bottom: rem(20px);
+    }
+
+    &__content {
+        position: relative;
+        overflow: hidden;
+
+        transition: height 0.3s;
+    }
+
+    &__item {
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10%);
+
+        transition: opacity 0.3s, transform 0.3s;
+
+        &.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            position: static;
+        }
+    }
+
+    &--horizontal {
+        display: flex;
+
+        .tabs {
+            &__header {
+                flex: 0 0 rem(270px);
+                max-width: rem(270px);
+                width: 100%;
+                margin-right: rem(30px);
+            }
+
+            &__nav {
+                margin-bottom: 0;
+
+                li {
+                    width: 100%;
+                    margin: 0 0 rem(20px);
+                }
+            }
+
+            &__content {
+                flex: 0 1 auto;
+                max-width: 100%;
+                width: 100%;
+            }
+
+            &__item {
+                transform: translateY(0) translateX(-10%);
+                &.active {
+                    transform: translate(0);
+                }
+            }
+        }
+    }
+}

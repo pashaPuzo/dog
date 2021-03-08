@@ -11,7 +11,8 @@ import testWebP from "./libs/webp";
 
 import Modal from "./libs/modal";
 import qty from "./libs/qty";
-require('./libs/disabled-copy');
+import tabs from "./libs/tabs";
+// require('./libs/disabled-copy');
 
 import "simplebar";
 
@@ -41,6 +42,9 @@ document.addEventListener("DOMContentLoaded", () => {
             block.querySelector('.qty__result').innerHTML = price;
         }
     });
+
+    /* Табы */
+    tabs('.tabs');
 
     let body = $("body");
 

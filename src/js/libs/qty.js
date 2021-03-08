@@ -1,6 +1,6 @@
 const qty = ( selector, callback ) => {
     let blocks = document.querySelectorAll(selector);
-    if ( blocks.length === 0 ) return false;
+    if ( blocks.length === 0 ) return;
 
     blocks.forEach(block => {
         let input = block.querySelector('.qty__input');
