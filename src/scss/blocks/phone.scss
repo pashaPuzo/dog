@@ -1,0 +1,13 @@
+.phone {
+    font-weight: 600;
+    font-size: rem(18px);
+    color: #FFFFFF;
+
+    &::before {
+        content: url('../images/svg/icon-phone.svg');
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: rem(3px);
+        margin-right: rem(7px);
+    }
+}

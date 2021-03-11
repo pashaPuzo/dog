@@ -28,7 +28,7 @@ const webpackConfig = require("./webpack.config.js");
 const clean = () => del(["./dist/*"]);
 
 const styles = () => {
-  return src(["./src/scss/**/*.scss"])
+  return src(["./src/scss/styles.scss"])
     .pipe(
       sass({
         outputStyle: "expanded",

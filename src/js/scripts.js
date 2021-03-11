@@ -56,5 +56,24 @@ document.addEventListener("DOMContentLoaded", () => {
         parent.find('input').prop('disabled', !parent.find('input').prop('disabled'));
         parent.find('input').prop('readonly', !parent.find('input').prop('readonly'));
     });
+
+    body.on('click', '.product--radio', function(e){
+        e.preventDefault();
+
+        $(this).find('input[type="radio"]').prop('checked', true).trigger('change');
+    });
+
+
+    const setHeaderHeight = () => {
+        let headerHeight = $('.header--transparent').height();
+        if ( headerHeight !== 0 ) {
+            $('.content').css({
+                marginTop: -headerHeight + "px",
+            });
+        }
+    }
+
+    $(window).on('resize load', setHeaderHeight);
+    
     
 });

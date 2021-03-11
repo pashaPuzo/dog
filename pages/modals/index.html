@@ -291,9 +291,50 @@
         </form>
     </div>
     <div class="modal modal-cart" data-target-id="empty-cart">
-        <form class="modal__inner cart cart--empty" class="js-form-submit">
-            <div class="cart__left"></div>
-            <div class="cart__right">
+        <div class="modal__inner cart cart--empty">
+            <form class="cart__left js-add-to-cart">
+                <div class="cart__left-inner">
+                    <div class="cart__title">Корм для собак ХотьDog</div>
+                    <div class="product-list">
+                        <div class="product-list__item">
+                            <div class="product product--radio">
+                                <div class="product__image" style="background-image: url('../../dist/images/product-1.png');"></div>
+                                <div class="input-radio">
+                                    <input id="product-1" type="radio" name="product" value="1" checked>
+                                    <label for="product-1" class="input-radio__label">
+                                        <span>2,5 кг</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-list__item">
+                            <div class="product product--radio">
+                                <div class="product__image" style="background-image: url('../../dist/images/product-1.png');"></div>
+                                <div class="input-radio">
+                                    <input id="product-2" type="radio" name="product" value="2">
+                                    <label for="product-2" class="input-radio__label">
+                                        <span>6,5 кг</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-list__item">
+                            <div class="product product--radio">
+                                <div class="product__image" style="background-image: url('../../dist/images/product-1.png');"></div>
+                                <div class="input-radio">
+                                    <input id="product-3" type="radio" name="product" value="3">
+                                    <label for="product-3" class="input-radio__label">
+                                        <span>12,5 кг</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="button button--black">Добавить товар в корзину</button>
+                </div>
+            </form>
+            <form class="cart__right js-form-submit">
                 <div class="cart__header">
                     <div class="modal__close js-modal-close">
                         <svg width="13" height="13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -313,13 +354,54 @@
     
                     <button type="button" class="button button--gray" disabled>Оформить заказ</button>
                 </div>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
     <div class="modal modal-cart" data-target-id="cart">
-        <form class="modal__inner cart" class="js-form-submit">
-            <div class="cart__left"></div>
-            <div class="cart__right">
+        <div class="modal__inner cart">
+            <form class="cart__left js-add-to-cart">
+                <div class="cart__left-inner">
+                    <div class="cart__title">Корм для собак ХотьDog</div>
+                    <div class="product-list">
+                        <div class="product-list__item">
+                            <div class="product product--radio">
+                                <div class="product__image" style="background-image: url('../../dist/images/product-1.png');"></div>
+                                <div class="input-radio">
+                                    <input id="product-1" type="radio" name="product" value="1" checked>
+                                    <label for="product-1" class="input-radio__label">
+                                        <span>2,5 кг</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-list__item">
+                            <div class="product product--radio">
+                                <div class="product__image" style="background-image: url('../../dist/images/product-1.png');"></div>
+                                <div class="input-radio">
+                                    <input id="product-2" type="radio" name="product" value="2">
+                                    <label for="product-2" class="input-radio__label">
+                                        <span>6,5 кг</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-list__item">
+                            <div class="product product--radio">
+                                <div class="product__image" style="background-image: url('../../dist/images/product-1.png');"></div>
+                                <div class="input-radio">
+                                    <input id="product-3" type="radio" name="product" value="3">
+                                    <label for="product-3" class="input-radio__label">
+                                        <span>12,5 кг</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="button button--black">Добавить товар в корзину</button>
+                </div>
+            </form>
+            <form class="cart__right js-form-submit">
                 <div class="cart__header">
                     <div class="modal__close js-modal-close">
                         <svg width="13" height="13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -421,8 +503,8 @@
     
                     <button type="submit" class="button button--yellow">Оформить заказ</button>
                 </div>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
     <div class="modal modal-success" data-target-id="success">
         <div class="modal__inner">

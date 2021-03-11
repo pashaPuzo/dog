@@ -1,0 +1,22 @@
+.city {
+    &::before {
+        content: url('../images/svg/city-location.svg');
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: rem(7px);
+        margin-top: rem(3px);
+    }
+
+    span {
+        font-weight: 400;
+        font-size: rem(16px);
+        color: #FFFFFF;
+
+        &.city__current {
+            font-weight: 400;
+            font-size: rem(16px);
+            color: #FFC700;
+        }
+    }
+
+}

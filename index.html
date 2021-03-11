@@ -12,7 +12,7 @@
 <body>
     
     <div class="wrapper">
-        <header class="header">
+        <header class="header header--transparent">
             <div class="container">
                 <div class="header__wrapper">
                     <div class="header__logo">
@@ -26,11 +26,17 @@
                     </div>
 
                     <div class="header__shopping">
+                        <div class="header__city">
+                            <div class="city js-modal-open" data-target="city">
+                                <span>Ваш город: </span>
+                                <span class="city__current">Омск</span>
+                            </div>
+                        </div>
                         <div class="header__cart">
                             <div class="mini-cart">
                                 <a href="/cart.html" class="mini-cart__link">
                                     <div class="mini-cart__image">
-                                        <img src="./dist/images/svg/cart.svg" alt="Корзина">
+                                        <img src="./dist/images/svg/cart-white.svg" alt="Корзина">
                                     </div>
                                     <div class="mini-cart__counter">3</div>
                                 </a>
@@ -40,7 +46,7 @@
                             <div class="mini-personal">
                                 <a href="./personal" class="mini-personal__link">
                                     <div class="mini-personal__image">
-                                        <img src="./dist/images/svg/presonal.svg" alt="Личный кабинет">
+                                        <img src="./dist/images/svg/personal-white.svg" alt="Личный кабинет">
                                     </div>
                                 </a>
 
@@ -87,17 +93,44 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="header__phone">
+                            <a href="tel:+79122655840" class="phone">+7 (912) 265-58-40</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </header>
         <main class="content">
-            <section class="section section-personal">
+            <section class="section section-main" style="background-image: url('./dist/images/section-main.png');">
                 <div class="container">
-                    <h1 class="section__title">Статьи</h1>
+                    <div class="section-main__wrapper">
+                        <div class="section-main__title section__title">Натуральная быстрокаша для собак <span>«ХотьDog»</span></div>
 
+                        <div class="section-main__sub-title">Вся польза злаков для самых преданных</div>
+
+                        <button type="button" class="section-main__button button button--styled">Купить</button>
+                    </div>
                 </div>
             </section>
+
+            <div class="home-info">
+                <div class="container">
+                    <div class="home-info__wrapper">
+                        <div class="swiper-container info-slider">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">Slide 1</div>
+                              <div class="swiper-slide">Slide 2</div>
+                              <div class="swiper-slide">Slide 3</div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-scrollbar"></div>
+                          </div>
+                    </div>
+                </div>
+            </div>
 
         </main>
         <footer class="footer">
@@ -140,28 +173,22 @@
     <script src="./dist/js/scripts.min.js"></script>
 
     <div class="modal-overlay modal-overlay--blur"></div>
-    <div class="modal" data-target-id="some-modal-1">
-        <div class="modal__header">
-            <div class="modal__title">Заголовок модального окна 1</div>
-            <div class="modal__close js-modal-close">x</div>
-        </div>
-        <div class="modal__body">
-            <a href="" data-target="some-modal-2" class="js-open-modal">Открыть модальное окно 2</a>
-        </div>
-        <div class="modal__footer">
-            <button class="button js-modal-close">Закрыть</button>
-        </div>
-    </div>
-    <div class="modal" data-target-id="some-modal-2">
-        <div class="modal__header">
-            <div class="modal__title">Заголовок модального окна 2</div>
-            <div class="modal__close js-modal-close">x</div>
-        </div>
-        <div class="modal__body">
-            <a href="" data-target="some-modal-1" class="js-open-modal">Открыть модальное окно 1</a>
-        </div>
-        <div class="modal__footer">
-            <button class="button js-modal-close">Закрыть</button>
+    <div class="modal modal-order" style="width: 100%;" data-target-id="city">
+        <div class="modal__inner">
+            <div class="modal__header">
+                <div class="modal__close js-modal-close">
+                    <svg width="13" height="13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.645 6.5l4.022-4.021a1.137 1.137 0 000-1.609L12.13.334a1.137 1.137 0 00-1.609 0L6.5 4.356 2.48.333a1.137 1.137 0 00-1.609 0L.333.87a1.137 1.137 0 000 1.609L4.356 6.5.334 10.522a1.137 1.137 0 000 1.609l.536.536a1.137 1.137 0 001.609 0L6.5 8.645l4.022 4.022a1.137 1.137 0 001.609 0l.536-.536a1.137 1.137 0 000-1.609L8.645 6.5z" fill="#A1A1A1"/>
+                    </svg>
+                </div>
+                <div class="modal__title">Ваш город: ОМСК</div>
+            </div>
+            <div class="modal__body" data-simplebar>
+                А тут список городов
+            </div>
+            <div class="modal__footer">
+                <button type="button" class="button button--gray js-modal-close">Назад</button>
+            </div>
         </div>
     </div>
 </body>

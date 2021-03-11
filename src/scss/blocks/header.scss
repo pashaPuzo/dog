@@ -1,6 +1,12 @@
 .header {
     background-color: #ffffff;
 
+    &--transparent {
+        background-color: transparent;
+        position: relative;
+        z-index: 1;
+    }
+
     &__wrapper {
         position: relative;
         padding: rem(35px) 0 rem(31px);
@@ -22,12 +28,27 @@
         text-align: right;
         margin: 0 rem(-15px);
         margin-left: auto;
+
+        display: flex;
+        align-items: center;
     }
 
-    &__cart, &__personal {
+    &__cart, &__personal, &__phone, &__city {
         display: inline-block;
         vertical-align: middle;
 
         margin: 0 rem(15px);
+    }
+
+    &__city {
+        padding: 0 15px;
+        margin-left: 0;
+        margin-right: auto;
+
+        text-align: left;
+    }
+
+    &__cart {
+        margin-left: auto;
     }
 }

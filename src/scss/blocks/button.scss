@@ -24,4 +24,36 @@
         background-color: #101010;
         color: #ffffff;
     }
+
+    &--styled {
+        background: linear-gradient(0deg, #FFC700 44.17%, #FFFFFF 215.83%);
+        border-radius: rem(50px);
+        position: relative;
+        padding: rem(18px) rem(32px) rem(20px) rem(20px);
+
+        font-weight: 700;
+        font-size: rem(12px);
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        
+        color: #875100;
+
+        &::after {
+            content: "";
+            display: block;
+            width: rem(48px);
+            height: rem(48px);
+            background-color: #ffffff;
+            border-radius: 100%;
+
+            position: absolute;
+            right: 7px;
+            top: 50%;
+            transform: translateY(-50%);
+
+            background-image: url('../images/svg/button-styled-arrow.svg');
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+    }
 }
