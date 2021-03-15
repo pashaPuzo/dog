@@ -101,6 +101,8 @@
                         <button class="button button--yellow js-modal-open" data-target="success">Успешная отправка форм</button>
                         <button class="button button--yellow js-modal-open" data-target="empty-cart">Пустая корзина</button>
                         <button class="button button--yellow js-modal-open" data-target="cart">Корзина с товарами</button>
+                        <button class="button button--yellow js-modal-open" data-target="repassword">Смена пароля</button>
+                        <button class="button button--yellow js-modal-open" data-target="login">Авторизация</button>
                     </div>
 
                     <div class="personal-bubble personal-bubble--not-hover" style="margin-top: 20px;">
@@ -287,6 +289,51 @@
                 <button type="button" class="button button--gray js-modal-close">Назад</button>
     
                 <p class="modal__info">Гарантируем безопасность ваших данных</p>
+            </div>
+        </form>
+    </div>
+    <div class="modal modal-repassword" data-target-id="repassword">
+        <form class="modal__inner" class="js-form-submit">
+            <div class="modal__header">
+                <div class="modal__close js-modal-close">
+                    <svg width="13" height="13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.645 6.5l4.022-4.021a1.137 1.137 0 000-1.609L12.13.334a1.137 1.137 0 00-1.609 0L6.5 4.356 2.48.333a1.137 1.137 0 00-1.609 0L.333.87a1.137 1.137 0 000 1.609L4.356 6.5.334 10.522a1.137 1.137 0 000 1.609l.536.536a1.137 1.137 0 001.609 0L6.5 8.645l4.022 4.022a1.137 1.137 0 001.609 0l.536-.536a1.137 1.137 0 000-1.609L8.645 6.5z" fill="#A1A1A1"/>
+                    </svg>
+                </div>
+                <div class="modal__title">Смена пароля</div>
+            </div>
+            <div class="modal__body" data-simplebar>
+                <div class="input-group">
+                    <input type="text" class="js-validate" data-type="required" placeholder="Введите телефон или E-mail">
+                </div>
+            </div>
+            <div class="modal__footer">
+                <button type="submit" class="button button--yellow">Получить новый пароль</button>
+            </div>
+        </form>
+    </div>
+    <div class="modal modal-login" data-target-id="login">
+        <form class="modal__inner" class="js-form-submit">
+            <div class="modal__header">
+                <div class="modal__close js-modal-close">
+                    <svg width="13" height="13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.645 6.5l4.022-4.021a1.137 1.137 0 000-1.609L12.13.334a1.137 1.137 0 00-1.609 0L6.5 4.356 2.48.333a1.137 1.137 0 00-1.609 0L.333.87a1.137 1.137 0 000 1.609L4.356 6.5.334 10.522a1.137 1.137 0 000 1.609l.536.536a1.137 1.137 0 001.609 0L6.5 8.645l4.022 4.022a1.137 1.137 0 001.609 0l.536-.536a1.137 1.137 0 000-1.609L8.645 6.5z" fill="#A1A1A1"/>
+                    </svg>
+                </div>
+                <div class="modal__title">Авторизация</div>
+            </div>
+            <div class="modal__body" data-simplebar>
+                <div class="input-group">
+                    <input type="text" class="js-validate" data-type="required" placeholder="Введите логин">
+                </div>
+                <div class="input-group">
+                    <input type="text" class="js-validate" data-type="mail" placeholder="Введите E-mail">
+                </div>
+            </div>
+            <div class="modal__footer">
+                <button type="submit" class="button button--yellow">Войти</button>
+
+                <p class="modal__info"><a class="js-modal-open" data-target="repassword">Забыли пароль?</a></p>
             </div>
         </form>
     </div>

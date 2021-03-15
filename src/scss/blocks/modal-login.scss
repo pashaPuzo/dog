@@ -1,4 +1,4 @@
-.modal-order {
+.modal-login {
     max-width: rem(425px);
     width: 100%;
 
@@ -33,6 +33,7 @@
 
             .button {
                 margin-right: rem(15px);
+                width: 100%;
                 &:last-of-type {
                     margin: 0;
                 }
@@ -40,20 +41,23 @@
         }
 
         &__info {
-            margin-top: rem(25px);
+            margin-top: rem(15px);
             flex: 0 0 100%;
             width: 100%;
             text-align: center;
             font-weight: 700;
             font-size: rem(10px);
             letter-spacing: 0.05em;
-            text-transform: uppercase;
-            color: #000000;
+            text-transform: uppercase;            
+            color: #A1A1A1;
         }
     }
 
     .input-group {
         margin-bottom: rem(15px);
+        &:last-of-type {
+            margin-bottom: 0;
+        }
     }
 
     .input-radio {
@@ -70,4 +74,5 @@
     .input-checkbox {
         margin-bottom: rem(15px);
     }
+
 }

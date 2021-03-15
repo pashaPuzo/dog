@@ -3048,6 +3048,7 @@ footer.footer {
 
 .modal-order {
     max-width: 26.5625rem;
+    width: 100%;
 }
 
 .modal-order .modal__title {
@@ -3090,7 +3091,7 @@ footer.footer {
 }
 
 .modal-order .modal__footer .button:last-of-type {
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .modal-order .modal__info {
@@ -3162,6 +3163,180 @@ footer.footer {
 
 .modal-cart .modal__inner {
     height: 30rem;
+}
+
+.modal-repassword {
+    max-width: 26.5625rem;
+    width: 100%;
+}
+
+.modal-repassword .modal__title {
+    font-weight: 700;
+    font-size: 0.9375rem;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #101010;
+}
+
+.modal-repassword .modal__header {
+    padding-top: 1.4375rem;
+    margin-bottom: 2.1875rem;
+}
+
+.modal-repassword .modal__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.modal-repassword .modal__footer {
+    padding-top: 0.9375rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.modal-repassword .modal__footer .button {
+    width: 100%;
+    margin-right: 0.9375rem;
+}
+
+.modal-repassword .modal__footer .button:last-of-type {
+    margin: 0;
+}
+
+.modal-repassword .modal__info {
+    margin-top: 1.5625rem;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 0.625rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.modal-repassword .input-group {
+    margin-bottom: 0.9375rem;
+}
+
+.modal-repassword .input-group:last-of-type {
+    margin-bottom: 0;
+}
+
+.modal-repassword .input-radio {
+    margin-right: 0.9375rem;
+}
+
+.modal-repassword .input-radio:last-of-type {
+    margin-right: 0;
+}
+
+.modal-repassword .form-group {
+    margin-bottom: 0.9375rem;
+}
+
+.modal-repassword .input-checkbox {
+    margin-bottom: 0.9375rem;
+}
+
+.modal-login {
+    max-width: 26.5625rem;
+    width: 100%;
+}
+
+.modal-login .modal__title {
+    font-weight: 700;
+    font-size: 0.9375rem;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #101010;
+}
+
+.modal-login .modal__header {
+    padding-top: 1.4375rem;
+    margin-bottom: 2.1875rem;
+}
+
+.modal-login .modal__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.modal-login .modal__footer {
+    padding-top: 0.9375rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.modal-login .modal__footer .button {
+    margin-right: 0.9375rem;
+    width: 100%;
+}
+
+.modal-login .modal__footer .button:last-of-type {
+    margin: 0;
+}
+
+.modal-login .modal__info {
+    margin-top: 0.9375rem;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 0.625rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #A1A1A1;
+}
+
+.modal-login .input-group {
+    margin-bottom: 0.9375rem;
+}
+
+.modal-login .input-group:last-of-type {
+    margin-bottom: 0;
+}
+
+.modal-login .input-radio {
+    margin-right: 0.9375rem;
+}
+
+.modal-login .input-radio:last-of-type {
+    margin-right: 0;
+}
+
+.modal-login .form-group {
+    margin-bottom: 0.9375rem;
+}
+
+.modal-login .input-checkbox {
+    margin-bottom: 0.9375rem;
 }
 
 .header {
