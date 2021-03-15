@@ -82,11 +82,24 @@ document.addEventListener("DOMContentLoaded", () => {
     const initHomeInfo = () => {
         let slides = document.querySelectorAll('.swiper-container.home-info__slider');
 
+        const setOffsetAfterBlock = ( selector, offset = { top: 0, bottom: 0 } ) => {
+            selector.nextElementSibling.classList.add('js-has-element-translate');
+            selector.nextElementSibling.style.marginTop = `-${ offset.top }px`;
+            selector.nextElementSibling.style.paddingTop = `${ offset.top / 2 }px`;
+        }
+
         slides.forEach(slider => {
             let infoSlider = new Swiper(slider, {
                 autoHeight: true,
                 loop: true,
+                on: {
+                    transitionEnd: (swiper) => {
+                        let sliderHeight = swiper.slides[swiper.activeIndex].clientHeight;
+                        setOffsetAfterBlock(slider.closest('.home-info'), { top: sliderHeight, bottom: 0 });
+                    }
+                }
             });
+
             let infoSliderPrev = slider.closest('.home-info').querySelector('.home-info__prev')
             let infoSliderNext = slider.closest('.home-info').querySelector('.home-info__next')
 

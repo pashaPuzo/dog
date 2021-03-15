@@ -1,0 +1,34 @@
+.section-advantages {
+    background-image: url(../images/section-bg-2.png);
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &.js-has-element-translate {
+        transition: margin 0.3s, padding 0.3s;
+        .section-advantages {
+            &__wrapper {
+                padding-top: rem(100px);
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        flex: 0 0 calc( 100% / 4 - 30px );
+        max-width: calc( 100% / 4 - 30px );
+        width: 100%;
+
+        margin: 0 rem(15px) rem(40px);
+
+        .advantage {
+            max-width: 80%;
+            margin: 0 auto;
+        }
+    }
+}

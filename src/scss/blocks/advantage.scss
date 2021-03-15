@@ -1,0 +1,41 @@
+.advantage {
+    &__image {
+        margin: 0 auto;
+        background: #FFFFFF;
+        box-shadow: 0px rem(2px) rem(5px) rgba(0, 0, 0, 0.05);
+        border-radius: rem(10px);
+
+        width: rem(100px);
+        height: rem(100px);
+        position: relative;
+        z-index: 2;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-bottom: rem(35px);
+
+        &::before {
+            content: "";
+            display: block;
+            width: rem(100px);
+            height: rem(100px);
+            position: absolute;
+            left: 0;
+            top: rem(3px);
+            background: rgba(#FFFFFF, 0.6);
+            border-radius: rem(10px);
+            z-index: -1;
+        }
+    }
+
+    &__text {
+        font-weight: 600;
+        font-size: rem(16px);
+        text-align: center;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        color: #101010;
+    }
+}
