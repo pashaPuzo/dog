@@ -14,6 +14,10 @@ import qty from "./libs/qty";
 import tabs from "./libs/tabs";
 // require('./libs/disabled-copy');
 
+import Swiper from "swiper";
+import SwiperCore, { Navigation } from "swiper/core"
+SwiperCore.use([Navigation]);
+
 import "simplebar";
 
 
@@ -74,6 +78,30 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     $(window).on('resize load', setHeaderHeight);
-    
-    
+
+    const initHomeInfo = () => {
+        let slides = document.querySelectorAll('.swiper-container.home-info__slider');
+
+        slides.forEach(slider => {
+            let infoSlider = new Swiper(slider, {
+                autoHeight: true,
+                loop: true,
+            });
+            let infoSliderPrev = slider.closest('.home-info').querySelector('.home-info__prev')
+            let infoSliderNext = slider.closest('.home-info').querySelector('.home-info__next')
+
+            infoSliderPrev.addEventListener('click', () => {
+                infoSlider.slidePrev();
+            });
+
+            infoSliderNext.addEventListener('click', () => {
+                infoSlider.slideNext();
+            });
+        });
+    }
+    initHomeInfo();
+
+
+
+
 });

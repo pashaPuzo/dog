@@ -1,0 +1,35 @@
+.home-info {
+    transform: translateY(-50%);
+
+    &__content {
+        position: relative;
+    }
+
+    &__prev, &__next {
+        position: absolute;
+        width: rem(50px);
+        height: rem(50px);
+        background-color: #FFC700;
+
+        border-radius: 100%;
+
+        top: 50%;
+        z-index: 1;
+
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    &__prev {
+        left: 0;
+        transform: translate(-50%, -50%);
+        background-image: url('../images/svg/slider-arrow-prev.svg');
+    }
+
+    &__next {
+        right: 0;
+        cursor: pointer;
+        transform: translate(50%, -50%);
+        background-image: url('../images/svg/slider-arrow-next.svg');
+    }
+}

@@ -3,7 +3,7 @@ const webpack = require("webpack");
 const jquery = require("jquery");
 
 module.exports = {
-  mode: "production",
+  mode: "development",
   module: {
     rules: [
       {
