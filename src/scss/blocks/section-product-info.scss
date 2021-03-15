@@ -1,0 +1,25 @@
+.section-product-info {
+    padding-top: rem(60px);
+
+    background-image: url('../images/section-4-bg.png');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+
+    .section {
+        &__title {
+            margin-bottom: rem(35px);
+        }
+    }
+
+    &__left {
+        flex: 0 0 rem(755px);
+        max-width: rem(755px);
+        width: 100%;
+    }
+
+    &__right {
+        flex: 0 1 auto
+    }
+}
