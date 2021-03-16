@@ -1,0 +1,20 @@
+.section-ingredients-info {
+    .tabs {
+        &__target {
+            flex: 1;
+            max-width: 100%;
+            width: 100%;
+
+            text-align: left;
+            padding: rem(9.5px) 0 rem(9.5px) rem(25px);
+        }
+
+        &__nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            overflow: hidden;
+        }
+    }
+}

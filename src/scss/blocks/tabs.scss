@@ -1,6 +1,30 @@
 .tabs {
+    &__target{
+        &--has-icon {
+            & > * {
+                vertical-align: middle;
+            }
+            .tabs {
+                &__icon {
+                    display: inline-block;
+                    max-width: rem(40px);
+                    max-height: rem(25px);
+
+                    margin-right: rem(6px);
+
+                    svg {
+                        max-width: rem(40px);
+                        height: rem(25px);
+                        transition: fill 0.3s;
+                        fill: #C4C4C4;
+                    }
+                }
+            }
+        }
+    }
     &__nav {
         margin: 0 rem(-10px);
+
         li {
             display: inline-block;
             padding: rem(13px) rem(20px) rem(15px);
@@ -22,6 +46,10 @@
             &.active {
                 background-color: #FFC700;
                 color: #ffffff;
+
+                svg {
+                    fill: #FFFFFF;
+                }
             }
         }
     }

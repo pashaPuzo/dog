@@ -1,21 +1,19 @@
 const tabs = (selector) => {
-    let tabs = document.querySelectorAll(selector);
+    let body = $('body');
 
-    if ( tabs.length === 0 ) return;
+    body.on('click', `${selector} .tabs__nav li`, function(e) {
+        e.preventDefault();
 
-    tabs.forEach(tabsItem => {
-        tabsItem.querySelectorAll('.tabs__nav li').forEach(tabNav => {
-            tabNav.addEventListener('click', (event) => {
-                let { tab } = event.target.dataset;
-    
-                if ( !tab ) return;
-                tabsItem.querySelectorAll('.tabs__nav li').forEach(item => item.classList.remove('active'));
-                event.target.classList.add('active');
-                tabsItem.querySelectorAll('.tabs__item').forEach(item => item.classList.remove('active'));
-                tabsItem.querySelector(`[data-tab-id="${tab}"]`).classList.add('active');
-            });
-        });
+        let tab = $(this).closest(`${selector}`);
+
+        tab.find('.tabs__nav li.active').removeClass('active');
+        $(this).addClass('active');
+        let tabId = $(this).data('tab');
+
+        tab.find(`.tabs__content .tabs__item.active`).removeClass('active');
+        tab.find(`.tabs__content .tabs__item[data-tab-id=${tabId}]`).addClass('active');
     });
+
 }
 
 export default tabs;

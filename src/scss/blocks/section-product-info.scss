@@ -17,9 +17,28 @@
         flex: 0 0 rem(755px);
         max-width: rem(755px);
         width: 100%;
+        margin-right: rem(50px);
     }
 
     &__right {
-        flex: 0 1 auto
+        flex: 0 1 auto;
+    }
+
+    &__body {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .tabs {
+        &__content {
+            background: #FFFFFF;
+            border-radius: 10px;
+            padding: rem(10px);
+        }
+
+        &__item {
+            border: rem(1px) solid #E5E5E5;
+            border-radius: rem(5px);
+        }
     }
 }
