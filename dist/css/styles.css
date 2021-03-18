@@ -3617,6 +3617,113 @@ footer.footer {
     margin-bottom: 0.9375rem;
 }
 
+.modal-city {
+    max-width: 27.5rem;
+    width: 100%;
+}
+
+.modal-city .modal__title {
+    font-weight: 700;
+    font-size: 0.9375rem;
+    text-align: left;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #101010;
+}
+
+.modal-city .modal__header {
+    padding-top: 1.4375rem;
+    margin-bottom: 1.4375rem;
+}
+
+.modal-city .modal__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.modal-city .modal__footer {
+    padding-top: 0.9375rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.modal-city .modal__footer .button {
+    margin-right: 1.25rem;
+}
+
+.modal-city .modal__footer .button:last-of-type {
+    margin: 0;
+}
+
+.modal-city__button--yes {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 6.25rem;
+    flex: 0 0 6.25rem;
+    max-width: 6.25rem;
+    width: 100%;
+}
+
+.modal-city__button--cancel {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    max-width: 100%;
+    width: 100%;
+}
+
+.modal-city-choises {
+    max-width: 37.5rem;
+    width: 100%;
+}
+
+.modal-city-choises .modal__title {
+    font-weight: 700;
+    font-size: 0.9375rem;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #101010;
+}
+
+.modal-city-choises .modal__header {
+    padding-top: 1.4375rem;
+    margin-bottom: 1.875rem;
+}
+
+.modal-city-choises .modal__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.modal-city-choises .input-group {
+    margin-bottom: 1.25rem;
+}
+
+.city-change__list {
+    padding: 0 1.25rem;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #A1A1A1;
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+}
+
+.city-change__list ul li {
+    margin-bottom: 1.1875rem;
+}
+
 .header {
     background-color: #ffffff;
 }

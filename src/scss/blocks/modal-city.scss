@@ -1,0 +1,53 @@
+.modal-city {
+    max-width: rem(440px);
+    width: 100%;
+
+    .modal {
+        &__title {
+            font-weight: 700;
+            font-size: rem(15px);
+            text-align: left;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #101010;
+        }
+
+        &__header {
+            padding-top: rem(23px);
+            margin-bottom: rem(23px);
+        }
+
+        &__close {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        &__footer {
+            padding-top: rem(15px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .button {
+                margin-right: rem(20px);
+                &:last-of-type {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    &__button {
+        &--yes {
+            flex: 0 0 rem(100px);
+            max-width: rem(100px);
+            width: 100%;
+        }
+
+        &--cancel {
+            flex: 0 1 auto;
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+}

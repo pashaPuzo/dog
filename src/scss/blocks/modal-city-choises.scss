@@ -1,0 +1,51 @@
+.modal-city-choises {
+    max-width: rem(600px);
+    width: 100%;
+
+    .modal {
+        &__title {
+            font-weight: 700;
+            font-size: rem(15px);
+            text-align: center;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #101010;
+        }
+
+        &__header {
+            padding-top: rem(23px);
+
+            margin-bottom: rem(30px);
+        }
+
+        &__close {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+
+    .input-group {
+        margin-bottom: rem(20px);
+    }
+}
+
+.city-change {
+    &__list {
+        padding: 0 rem(20px);
+
+        font-weight: 700;
+        font-size: rem(12px);
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #A1A1A1;
+
+        column-count: 3;
+
+        ul {
+            li {
+                margin-bottom: rem(19px);
+            }
+        }
+    }
+}
