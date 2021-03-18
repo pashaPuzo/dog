@@ -1,4 +1,9 @@
 .section-production {
+    background-image: url('../images/section-7-bg.png');
+
+    background-position: center center;
+    background-repeat: no-repeat;
+
     &__text {
         max-width: 770px;
         width: 100%;

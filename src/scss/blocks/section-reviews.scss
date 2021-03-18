@@ -16,4 +16,14 @@
 
         padding: rem(55px) rem(55px);
     }
+
+    &__slider {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    &__body {
+        margin-bottom: rem(35px);
+    }
 }

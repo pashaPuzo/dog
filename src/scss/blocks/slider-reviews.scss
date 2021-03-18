@@ -1,0 +1,15 @@
+.slider-reviews {
+    width: 610px;
+    height: 610px;
+
+    position: relative;
+
+
+    &:before {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        content: url('../images/iphone-reviews-bg.png');
+    }
+}
