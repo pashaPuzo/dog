@@ -1,0 +1,68 @@
+.recipe {
+    &__inner {
+        display: flex;
+    }
+
+    &__slider {
+        flex: 0 0 rem(260px);
+        max-width: rem(260px);
+        width: 100%;
+
+        margin-right: rem(30px);
+
+        .slider-recipe {
+            border-radius: rem(5px);
+        }
+    }
+
+    &__content {
+        flex: 0 1 auto;
+        max-width: 100%;
+        width: 100%;
+    }
+
+
+    &__title {
+        font-weight: 700;
+        font-size: rem(18px);
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        
+        color: #101010;
+
+        margin-bottom: rem(15px);
+    }
+
+    &__text {
+        font-weight: normal;
+        font-size: rem(12px);
+
+        color: #000000;
+
+
+        .beautiful-list {
+            &__title {
+                font-weight: bold;
+                font-size: rem(12px);
+                letter-spacing: 0.05em;
+                text-transform: uppercase;                
+                color: #101010;
+
+                margin-bottom: rem(10px);
+            }
+            li {
+                margin-bottom: rem(15px);
+                &:before {
+                    top: 50% !important;
+                }
+            }
+            &--column-2 {
+                columns: 2;
+                font-size: rem(10px);
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+                color: #717171;
+            }
+        }
+    }
+}

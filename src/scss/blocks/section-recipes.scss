@@ -1,0 +1,29 @@
+.section-recipes {
+    padding-bottom: rem(268px);
+    background-image: url('../images/section-6-bg.png');
+
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    .section {
+        &__title {
+            text-align: center;
+        }
+
+        &__sub-title {
+            font-weight: 400;
+            font-size: rem(18px);
+            text-align: center;
+            color: #000000;
+
+            margin-bottom: rem(40px);
+        }
+    }
+
+    .tabs {
+        &__item {
+            background: #FFFFFF;
+            border-radius: 10px;
+            padding: rem(30px) rem(25px);
+        }
+    }
+}

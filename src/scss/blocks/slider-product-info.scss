@@ -1,0 +1,30 @@
+.slider-product-info {
+    .swiper-slide {
+        background: #FFFFFF;
+        border-radius: 10px;
+    }
+
+    .table {
+        margin-bottom: rem(30px);
+        &__row {
+            justify-content: space-between;
+        }
+
+        &__col {
+            padding: 0 rem(5px);
+            &:last-of-type {
+                flex: 0 1 auto;
+            }
+        }
+
+        &__header {
+            padding: rem(45px) 0 rem(35px);
+
+            .table {
+                &__row {
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}

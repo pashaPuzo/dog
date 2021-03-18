@@ -1,0 +1,22 @@
+.swiper-container-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+    position: static;
+    transform: translate(0);
+
+    margin: 0 auto;
+
+    margin-top: rem(20px);
+}
+
+.swiper-pagination-bullet {
+    width: rem(8px);
+    height: rem(8px);
+    background-color: #C4C4C4;
+}
+
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main {
+    background-color: #FFC700;
+}
+
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+    transform: scale(1);
+}

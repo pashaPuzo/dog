@@ -1,0 +1,25 @@
+.map-filter {
+    margin: 0 rem(-10px);
+    &__item {
+        display: inline-block;
+        padding: rem(13px) rem(20px) rem(15px);
+        text-align: center;
+        font-weight: 700;
+        font-size: rem(12px);
+        border-radius: rem(10px);
+        overflow: hidden;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        cursor: pointer;
+        margin: 0 rem(10px);
+        background-color: #e5e5e5;
+        color: #A1A1A1;
+        transition: all 0.3s;
+
+        &:hover,
+        &.active {
+            background-color: #FFC700;
+            color: #ffffff;
+        }
+    }
+}

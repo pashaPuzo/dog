@@ -1,4 +1,10 @@
 .section-ingredients-info {
+    background-image: url('../images/section-5-bg.png');
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
     .tabs {
         &__target {
             flex: 1;

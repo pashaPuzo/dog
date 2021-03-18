@@ -1,0 +1,30 @@
+.map {
+    &__addresses {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 rem(-15px);
+    }
+
+    &__filter {
+        margin-bottom: rem(30px);
+    }
+
+    .map-address {
+        max-width: calc( 100% / 2 - 30px );
+        width: 100%;
+        margin: 0 rem(15px) rem(30px);
+    }
+
+    &__block {
+        height: rem(585px);
+        background-color: rgba(0, 0, 0, 0.05);
+        margin-bottom: rem(20px);
+    }
+}
+.ymaps-2-1-78-default-cluster,
+.ymaps-2-1-78-svg-icon-content {
+    font-family: $fonts !important;
+    font-weight: 700 !important;
+    color: #101010;
+    font-size: rem(16px);
+}
