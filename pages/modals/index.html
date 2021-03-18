@@ -103,6 +103,7 @@
                         <button class="button button--yellow js-modal-open" data-target="cart">Корзина с товарами</button>
                         <button class="button button--yellow js-modal-open" data-target="repassword">Смена пароля</button>
                         <button class="button button--yellow js-modal-open" data-target="login">Авторизация</button>
+                        <button class="button button--yellow js-modal-open" data-target="city">Текущий город</button>
                     </div>
 
                     <div class="personal-bubble personal-bubble--not-hover" style="margin-top: 20px;">
@@ -569,6 +570,23 @@
                     </div>
                     <div class="form-success__content">Ваш заказ успешно оформлен!</div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal-order" style="width: 100%;" data-target-id="city">
+        <div class="modal__inner">
+            <div class="modal__header">
+                <div class="modal__close js-modal-close">
+                    <svg width="13" height="13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.645 6.5l4.022-4.021a1.137 1.137 0 000-1.609L12.13.334a1.137 1.137 0 00-1.609 0L6.5 4.356 2.48.333a1.137 1.137 0 00-1.609 0L.333.87a1.137 1.137 0 000 1.609L4.356 6.5.334 10.522a1.137 1.137 0 000 1.609l.536.536a1.137 1.137 0 001.609 0L6.5 8.645l4.022 4.022a1.137 1.137 0 001.609 0l.536-.536a1.137 1.137 0 000-1.609L8.645 6.5z" fill="#A1A1A1"/>
+                    </svg>
+                </div>
+                <div class="modal__title">Ваш город: ОМСК?</div>
+            </div>
+            <div class="modal__footer">
+                <button class="button button--yellow js-modal-close">Да</button>
+                <button class="button button--gray js-modal-open" data-target="city-choises">Нет, выбрать другой город</button>
             </div>
         </div>
     </div>

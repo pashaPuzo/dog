@@ -346,6 +346,6 @@ document.addEventListener("DOMContentLoaded", () => {
         let block = $(this).closest('.order');
 
         block.find('.order__header').toggleClass('active');
-        block.find('.order__body').toggleClass('active').slideToggle();
+        block.find('.order__body').slideToggle().toggleClass('active');
     })
 });
