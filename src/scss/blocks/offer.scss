@@ -1,0 +1,60 @@
+.offer {
+    position: relative;
+    z-index: 1;
+    font-family: 'Mazzard';
+    &__title {
+        font-weight: 700;
+        font-size: rem(40px);
+        text-align: center;
+        text-transform: uppercase;
+        
+        color: #000000;
+        margin-bottom: rem(5px);
+    }
+    &__description {
+        margin: 0 auto;
+        max-width: fit-content;
+        padding: rem(10px) rem(25px);
+        background: #FFFFFF;
+        border-radius: rem(6px);
+        font-weight: bold;
+        font-size: rem(16px);
+        text-align: center;
+        text-transform: uppercase;
+        color: #000000;
+
+        transform: skew(-10deg);
+
+        margin-bottom: rem(20px);
+
+        & > * {
+            transform: skew(10deg);
+            display: block;
+        }
+    }
+    &__image {
+        position: relative;
+        &::after {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            content: attr(data-percentage);
+            font-family: 'Mazzard';
+            font-weight: bold;
+            font-size: rem(51.5px);
+            color: #313131;
+            transform: rotate(4.45deg);
+
+            width: rem(131.18px);
+            height: rem(131.18px);
+
+            position: absolute;
+            right: rem(35px);
+            bottom: rem(45px);
+
+            background-image: url('../images/svg/star.svg');
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+    }
+}

@@ -24,6 +24,11 @@
             top: 0;
         }
 
+        &__body {
+            padding-right: rem(8px);
+            margin-right: rem(-8px);
+        }
+
         &__footer {
             padding-top: rem(15px);
             display: flex;

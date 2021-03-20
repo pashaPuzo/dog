@@ -18,6 +18,7 @@
 
         background-position: center center;
         background-repeat: no-repeat;
+        cursor: pointer;
     }
 
     &__prev {
@@ -28,7 +29,6 @@
 
     &__next {
         right: 0;
-        cursor: pointer;
         transform: translate(50%, -50%);
         background-image: url('../images/svg/slider-arrow-next.svg');
     }

@@ -1,0 +1,37 @@
+.modal-offer {
+    max-width: rem(425px);
+    width: 100%;
+    min-height: rem(455px);
+    background: radial-gradient(71.31% 287.94% at 48.67% 126.39%, #FFF500 0%, #FF7A00 100%);
+
+    padding: rem(60px) 0;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: rem(155px);
+        background-image: url("../images/cart-background-table.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        z-index: 0;
+    }
+
+    .modal {
+        &__close {
+            position: absolute;
+            right: rem(20px);
+            top: rem(20px);
+
+            svg {
+                fill: #313131;
+            }
+        }
+
+        &__inner { position: static; }
+    }
+}

@@ -104,6 +104,8 @@
                             <button class="button button--yellow js-modal-open" data-target="repassword">Смена пароля</button>
                             <button class="button button--yellow js-modal-open" data-target="login">Авторизация</button>
                             <button class="button button--yellow js-modal-open" data-target="city">Текущий город</button>
+                            <button class="button button--yellow js-modal-open" data-target="offer">Модалка акции</button>
+                            <button class="button button--yellow js-modal-open" data-target="delivery">Пункты выдачи</button>
                         </div>
                     </div>
 
@@ -157,7 +159,7 @@
 
     <div class="modal-overlay modal-overlay--blur"></div>
     <div class="modal modal-order" data-target-id="order">
-        <form class="modal__inner" class="js-form-submit">
+        <form class="modal__inner" class="order-form js-form-submit">
             <div class="modal__header">
                 <div class="modal__close js-modal-close">
                     <svg width="13" height="13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -168,13 +170,13 @@
             </div>
             <div class="modal__body" data-simplebar>
                 <div class="input-group">
-                    <input type="text" class="js-validate" data-type="required" placeholder="Введите имя">
+                    <input type="text" class="" placeholder="Введите имя">
                 </div>
                 <div class="input-group">
-                    <input type="email" class="js-validate" data-type="mail" placeholder="Введите E-mail">
+                    <input type="email" class="" placeholder="Введите E-mail">
                 </div>
                 <div class="input-group">
-                    <input type="tel" class="js-validate" data-type="phone" placeholder="Введите телефон">
+                    <input type="tel" class="" placeholder="Введите телефон">
                 </div>
 
                 <div class="form-group">
@@ -189,7 +191,7 @@
                         <div class="input-radio">
                             <input id="delivery-2" type="radio" name="delivery" value="">
                             <label for="delivery-2" class="input-radio__label">
-                                <span>При получении</span>
+                                <span>До двери</span>
                             </label>
                         </div>
                     </div>
@@ -198,6 +200,8 @@
                 <div class="input-group">
                     <input type="text" placeholder="Введите адрес">
                 </div>
+
+                <button class="order-form__button button button--black js-modal-open" data-target="delivery">Выбрать на карте</button>
 
                 <div class="form-group">
                     <div class="form-group__title">Форма оплаты</div>
@@ -230,6 +234,14 @@
                         <span>Зарегистрироваться</span>
                     </label>
                 </div>
+
+                <div class="input-group">
+                    <input type="password" class="" placeholder="Введите пароль">
+                </div>
+
+                <div class="input-group">
+                    <input type="password" class="" placeholder="Повторите пароль">
+                </div>
                 
 
             </div>
@@ -253,7 +265,7 @@
             </div>
             <div class="modal__body" data-simplebar>
                 <div class="input-group">
-                    <input type="text" class="js-validate" data-type="required" placeholder="Введите телефон или E-mail">
+                    <input type="text" class=""  placeholder="Введите телефон или E-mail">
                 </div>
             </div>
             <div class="modal__footer">
@@ -273,10 +285,10 @@
             </div>
             <div class="modal__body" data-simplebar>
                 <div class="input-group">
-                    <input type="text" class="js-validate" data-type="required" placeholder="Введите логин">
+                    <input type="text" class=""  placeholder="Введите логин">
                 </div>
                 <div class="input-group">
-                    <input type="text" class="js-validate" data-type="mail" placeholder="Введите E-mail">
+                    <input type="text" class=""  placeholder="Введите E-mail">
                 </div>
             </div>
             <div class="modal__footer">
@@ -552,7 +564,7 @@
                 <div class="city-change">
                     <div class="city-change__search">
                         <div class="input-group">
-                            <input type="text" class="js-validate" data-type="required" placeholder="Введите город">
+                            <input type="text" class=""  placeholder="Введите город">
                         </div>
                     </div>
                     <div class="city-change__list">
@@ -602,5 +614,238 @@
             </div>
         </div>
     </div>
+    <div class="modal modal-offer" style="width: 100%;" data-target-id="offer">
+        <div class="modal__inner">
+            <div class="modal__header">
+                <div class="modal__close js-modal-close">
+                    <svg width="13" height="13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.645 6.5l4.022-4.021a1.137 1.137 0 000-1.609L12.13.334a1.137 1.137 0 00-1.609 0L6.5 4.356 2.48.333a1.137 1.137 0 00-1.609 0L.333.87a1.137 1.137 0 000 1.609L4.356 6.5.334 10.522a1.137 1.137 0 000 1.609l.536.536a1.137 1.137 0 001.609 0L6.5 8.645l4.022 4.022a1.137 1.137 0 001.609 0l.536-.536a1.137 1.137 0 000-1.609L8.645 6.5z"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="modal__body" data-simplebar>
+                <div class="offer">
+                    <div class="offer__header">
+                        <div class="offer__title">Скидка 3%</div>
+                        <div class="offer__description">
+                            <span>
+                                На первую покупку!
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="offer__body">
+                        <div class="offer__image" data-percentage="3%">
+                            <img src="../../dist/images/offer-product.png" alt="Скидка!">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal modal-delivery" style="width: 100%;" data-target-id="delivery">
+        <div class="modal__inner">
+            <div class="modal__close js-modal-close">
+                <svg width="13" height="13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.645 6.5l4.022-4.021a1.137 1.137 0 000-1.609L12.13.334a1.137 1.137 0 00-1.609 0L6.5 4.356 2.48.333a1.137 1.137 0 00-1.609 0L.333.87a1.137 1.137 0 000 1.609L4.356 6.5.334 10.522a1.137 1.137 0 000 1.609l.536.536a1.137 1.137 0 001.609 0L6.5 8.645l4.022 4.022a1.137 1.137 0 001.609 0l.536-.536a1.137 1.137 0 000-1.609L8.645 6.5z" fill="#A1A1A1"/>
+                </svg>
+            </div>
+
+            <div class="delivery">
+                <div class="delivery__left">
+                    <div class="modal__title delivery__title">Пункты выдачи</div>
+                    <div class="delivery__info">ВЫБЕРИТЕ ПОДХОДЯЩЕЕ ДЛЯ ВАС МЕСТО ДЛЯ ПОЛУЧЕНИЯ ТОВАРА</div>
+
+                    <div class="delivery__filter">
+                        <div class="form-group">
+                            <div class="form-group__row">
+                                <div class="input-radio">
+                                    <input id="delivery_type-1" type="radio" name="delivery" value="all" checked>
+                                    <label for="delivery_type-1" class="input-radio__label">
+                                        <span>Все</span>
+                                    </label>
+                                </div>
+                                <div class="input-radio">
+                                    <input id="delivery_type-2" type="radio" name="delivery" value="points">
+                                    <label for="delivery_type-2" class="input-radio__label">
+                                        <span>Пункты выдачи</span>
+                                    </label>
+                                </div>
+                                <div class="input-radio">
+                                    <input id="delivery_type-3" type="radio" name="delivery" value="postamat">
+                                    <label for="delivery_type-3" class="input-radio__label">
+                                        <span>Постаматы</span>
+                                    </label>
+                                </div>
+                                <div class="input-radio">
+                                    <input id="delivery_type-4" type="radio" name="delivery" value="mail">
+                                    <label for="delivery_type-4" class="input-radio__label">
+                                        <span>Почта</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="delivery__points" data-simplebar>
+                        <div class="delivery-point">
+                            <div class="delivery-point__title">
+                                <span class="delivery-point__city">г. Тюмень, </span>
+                                <span class="delivery-point__address">УЛ. ИГРИМСКАЯ 22-43</span>
+                            </div>
+                            <div class="delivery-point__info">пн - пт 10:00-21:00 сб, вс 10:00-19:00</div>
+                        </div>
+                        <div class="delivery-point">
+                            <div class="delivery-point__title">
+                                <span class="delivery-point__city">г. Тюмень, </span>
+                                <span class="delivery-point__address">УЛ. ИГРИМСКАЯ 22-43</span>
+                            </div>
+                            <div class="delivery-point__info">пн - пт 10:00-21:00 сб, вс 10:00-19:00</div>
+                        </div>
+                        <div class="delivery-point active">
+                            <div class="delivery-point__title">
+                                <span class="delivery-point__city">г. Тюмень, </span>
+                                <span class="delivery-point__address">УЛ. ИГРИМСКАЯ 22-43</span>
+                            </div>
+                            <div class="delivery-point__info">пн - пт 10:00-21:00 сб, вс 10:00-19:00</div>
+                        </div>
+                        <div class="delivery-point">
+                            <div class="delivery-point__title">
+                                <span class="delivery-point__city">г. Тюмень, </span>
+                                <span class="delivery-point__address">УЛ. ИГРИМСКАЯ 22-43</span>
+                            </div>
+                            <div class="delivery-point__info">пн - пт 10:00-21:00 сб, вс 10:00-19:00</div>
+                        </div>
+                        <div class="delivery-point">
+                            <div class="delivery-point__title">
+                                <span class="delivery-point__city">г. Тюмень, </span>
+                                <span class="delivery-point__address">УЛ. ИГРИМСКАЯ 22-43</span>
+                            </div>
+                            <div class="delivery-point__info">пн - пт 10:00-21:00 сб, вс 10:00-19:00</div>
+                        </div>
+                        <div class="delivery-point">
+                            <div class="delivery-point__title">
+                                <span class="delivery-point__city">г. Тюмень, </span>
+                                <span class="delivery-point__address">УЛ. ИГРИМСКАЯ 22-43</span>
+                            </div>
+                            <div class="delivery-point__info">пн - пт 10:00-21:00 сб, вс 10:00-19:00</div>
+                        </div>
+                        <div class="delivery-point">
+                            <div class="delivery-point__title">
+                                <span class="delivery-point__city">г. Тюмень, </span>
+                                <span class="delivery-point__address">УЛ. ИГРИМСКАЯ 22-43</span>
+                            </div>
+                            <div class="delivery-point__info">пн - пт 10:00-21:00 сб, вс 10:00-19:00</div>
+                        </div>
+                        <div class="delivery-point">
+                            <div class="delivery-point__title">
+                                <span class="delivery-point__city">г. Тюмень, </span>
+                                <span class="delivery-point__address">УЛ. ИГРИМСКАЯ 22-43</span>
+                            </div>
+                            <div class="delivery-point__info">пн - пт 10:00-21:00 сб, вс 10:00-19:00</div>
+                        </div>
+                        <div class="delivery-point">
+                            <div class="delivery-point__title">
+                                <span class="delivery-point__city">г. Тюмень, </span>
+                                <span class="delivery-point__address">УЛ. ИГРИМСКАЯ 22-43</span>
+                            </div>
+                            <div class="delivery-point__info">пн - пт 10:00-21:00 сб, вс 10:00-19:00</div>
+                        </div>
+                        <div class="delivery-point">
+                            <div class="delivery-point__title">
+                                <span class="delivery-point__city">г. Тюмень, </span>
+                                <span class="delivery-point__address">УЛ. ИГРИМСКАЯ 22-43</span>
+                            </div>
+                            <div class="delivery-point__info">пн - пт 10:00-21:00 сб, вс 10:00-19:00</div>
+                        </div>
+                        <div class="delivery-point">
+                            <div class="delivery-point__title">
+                                <span class="delivery-point__city">г. Тюмень, </span>
+                                <span class="delivery-point__address">УЛ. ИГРИМСКАЯ 22-43</span>
+                            </div>
+                            <div class="delivery-point__info">пн - пт 10:00-21:00 сб, вс 10:00-19:00</div>
+                        </div>
+                        <div class="delivery-point">
+                            <div class="delivery-point__title">
+                                <span class="delivery-point__city">г. Тюмень, </span>
+                                <span class="delivery-point__address">УЛ. ИГРИМСКАЯ 22-43</span>
+                            </div>
+                            <div class="delivery-point__info">пн - пт 10:00-21:00 сб, вс 10:00-19:00</div>
+                        </div>
+                        <div class="delivery-point">
+                            <div class="delivery-point__title">
+                                <span class="delivery-point__city">г. Тюмень, </span>
+                                <span class="delivery-point__address">УЛ. ИГРИМСКАЯ 22-43</span>
+                            </div>
+                            <div class="delivery-point__info">пн - пт 10:00-21:00 сб, вс 10:00-19:00</div>
+                        </div>
+                        <div class="delivery-point">
+                            <div class="delivery-point__title">
+                                <span class="delivery-point__city">г. Тюмень, </span>
+                                <span class="delivery-point__address">УЛ. ИГРИМСКАЯ 22-43</span>
+                            </div>
+                            <div class="delivery-point__info">пн - пт 10:00-21:00 сб, вс 10:00-19:00</div>
+                        </div>
+                        <div class="delivery-point">
+                            <div class="delivery-point__title">
+                                <span class="delivery-point__city">г. Тюмень, </span>
+                                <span class="delivery-point__address">УЛ. ИГРИМСКАЯ 22-43</span>
+                            </div>
+                            <div class="delivery-point__info">пн - пт 10:00-21:00 сб, вс 10:00-19:00</div>
+                        </div>
+                        <div class="delivery-point">
+                            <div class="delivery-point__title">
+                                <span class="delivery-point__city">г. Тюмень, </span>
+                                <span class="delivery-point__address">УЛ. ИГРИМСКАЯ 22-43</span>
+                            </div>
+                            <div class="delivery-point__info">пн - пт 10:00-21:00 сб, вс 10:00-19:00</div>
+                        </div>
+                        <div class="delivery-point">
+                            <div class="delivery-point__title">
+                                <span class="delivery-point__city">г. Тюмень, </span>
+                                <span class="delivery-point__address">УЛ. ИГРИМСКАЯ 22-43</span>
+                            </div>
+                            <div class="delivery-point__info">пн - пт 10:00-21:00 сб, вс 10:00-19:00</div>
+                        </div>
+                        <div class="delivery-point">
+                            <div class="delivery-point__title">
+                                <span class="delivery-point__city">г. Тюмень, </span>
+                                <span class="delivery-point__address">УЛ. ИГРИМСКАЯ 22-43</span>
+                            </div>
+                            <div class="delivery-point__info">пн - пт 10:00-21:00 сб, вс 10:00-19:00</div>
+                        </div>
+                        <div class="delivery-point">
+                            <div class="delivery-point__title">
+                                <span class="delivery-point__city">г. Тюмень, </span>
+                                <span class="delivery-point__address">УЛ. ИГРИМСКАЯ 22-43</span>
+                            </div>
+                            <div class="delivery-point__info">пн - пт 10:00-21:00 сб, вс 10:00-19:00</div>
+                        </div>
+                        <div class="delivery-point">
+                            <div class="delivery-point__title">
+                                <span class="delivery-point__city">г. Тюмень, </span>
+                                <span class="delivery-point__address">УЛ. ИГРИМСКАЯ 22-43</span>
+                            </div>
+                            <div class="delivery-point__info">пн - пт 10:00-21:00 сб, вс 10:00-19:00</div>
+                        </div>
+                        <div class="delivery-point">
+                            <div class="delivery-point__title">
+                                <span class="delivery-point__city">г. Тюмень, </span>
+                                <span class="delivery-point__address">УЛ. ИГРИМСКАЯ 22-43</span>
+                            </div>
+                            <div class="delivery-point__info">пн - пт 10:00-21:00 сб, вс 10:00-19:00</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="delivery__right">
+                    <div id="map" class="delivery__map"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 </body>
 </html>

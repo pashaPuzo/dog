@@ -318,6 +318,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             let reviewSlider = new Swiper(slider.querySelector('.swiper-container'), {
                 loop: false,
+                slidesPerView: 3,
+                centeredSlides: true,
             });
 
             let reviewSliderPrev = slider
@@ -328,11 +330,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 .querySelector(".slider-reviews__next");
 
             reviewSliderPrev.addEventListener("click", () => {
-                infoSlider.slidePrev();
+                reviewSlider.slidePrev();
             });
 
             reviewSliderNext.addEventListener("click", () => {
-                infoSlider.slideNext();
+                reviewSlider.slideNext();
             });
         });
     }

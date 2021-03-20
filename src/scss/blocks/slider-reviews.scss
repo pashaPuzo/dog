@@ -1,15 +1,62 @@
 .slider-reviews {
-    width: 610px;
-    height: 610px;
-
+    width: rem(610px);
+    height: rem(610px);
     position: relative;
 
+    &__item {
+        height: rem(610px);
+        background-image: url('../images/IPhone.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
 
-    &:before {
+        opacity: 0.7;
+        filter: blur(4px);
+        transition: transform 0.3s, opacity 0.3s, filter 0.2s;
+
+        &.swiper-slide-active {
+            position: relative;
+            transform: scale(1.4);
+            background-color: whitesmoke;
+            z-index: 1;
+            filter: none;
+            opacity: 1;
+        }
+    }
+
+    &__image {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: scale(0.86);
+    }
+
+    &__prev, &__next {
         position: absolute;
-        left: 0;
+        width: rem(50px);
+        height: rem(50px);
+        background-color: #FFC700;
+
+        border-radius: 100%;
+
         top: 50%;
+        z-index: 1;
+
+        background-position: center center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    &__prev {
+        left: 0;
         transform: translate(-50%, -50%);
-        content: url('../images/iphone-reviews-bg.png');
+        background-image: url('../images/svg/slider-arrow-prev.svg');
+    }
+
+    &__next {
+        right: 0;
+        transform: translate(50%, -50%);
+        background-image: url('../images/svg/slider-arrow-next.svg');
     }
 }
