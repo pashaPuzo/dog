@@ -30,6 +30,12 @@
         cursor: pointer;
         transition: color 0.3s, background-color 0.2s;
 
+        @media ( max-width: 991px ) {
+            font-size: rem(9px);
+
+            padding: rem(15px) rem(40px) rem(15px) rem(5px);
+        }
+
         &.active,
         &:hover {
             background-color: #FFC700;
@@ -73,6 +79,11 @@
 
         transition: transform 0.3s;
 
+        @media ( max-width: 991px ) {
+            width: rem(40px);
+            height: rem(40px);
+        }
+
         svg {
             width: rem(12px);
             height: rem(8px);
@@ -112,6 +123,12 @@
 
     padding: rem(30px) rem(35px) rem(30px) rem(110px);
 
+    @media ( max-width: 991px ) {
+        font-size: rem(9px);
+        padding: 0;
+        padding-right: rem(28px);
+    }
+
     position: relative;
     &__image {
         max-width: rem(110px);
@@ -119,6 +136,22 @@
         position: absolute;
         left: 0;
         top: 0;
+
+        @media ( max-width: 991px ) {
+            max-width: rem(65px);
+            height: rem(62px);
+            position: relative;
+
+            img {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                object-fit: cover;
+            }
+        }
     }
 
     &__name {
@@ -139,6 +172,10 @@
     padding-right: rem(35px);
     text-align: right;
 
+    @media ( max-width: 991px ) {
+        padding-right: rem(28px);
+    }
+
 
     &__item {
         display: flex;
@@ -148,8 +185,12 @@
         font-size: rem(12px);
         letter-spacing: 0.05em;
         color: #A1A1A1;
-
         margin-bottom: rem(5px);
+
+        @media ( max-width: 991px ) {
+            font-size: rem(8px);
+        }
+
 
         &:last-of-type {
             margin-bottom: 0;
@@ -158,6 +199,10 @@
         &--total {
             font-size: rem(18px);
             color: #101010;
+
+            @media ( max-width: 991px ) {
+                font-size: rem(12px);
+            } 
         }
     }
 
@@ -173,6 +218,11 @@
         max-width: rem(160px);
         width: 100%;
         text-align: left;
+
+        @media ( max-width: 991px ) {
+            flex: 0 0 rem(100px);
+            max-width: rem(100px);
+        }
     }
 }
 
