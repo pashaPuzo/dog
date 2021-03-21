@@ -1,11 +1,29 @@
 .order {
     &__status {
         transition: color 0.3s;
+
+        @media ( max-width: 576px ) {
+            order: 3;
+            flex: 0 0 100%;
+            width: 100%;
+        }
+
         &--processed {
             color: #FFC700;
         }
         &--success {
             color: #101010;
+        }
+    }
+
+    &__date {
+        @media ( max-width: 576px ) {
+            order: 2;
+
+            flex: 0 0 50%;
+            width: 50%;
+
+            text-align: right;
         }
     }
 
@@ -36,6 +54,14 @@
             padding: rem(15px) rem(40px) rem(15px) rem(5px);
         }
 
+        @media ( max-width: 576px ) {
+            height: rem(105px);
+
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            text-align: left;
+        }
+
         &.active,
         &:hover {
             background-color: #FFC700;
@@ -55,13 +81,39 @@
             .order {
                 &__arrow {
                     transform: translateY(-50%) rotate(-180deg);
+
+                    @media ( max-width: 576px ) {
+                        transform: translateY(0%) rotate(-180deg);
+                    }
                 }
             }
         }
     }
 
+    &__cost {
+        @media ( max-width: 576px ) {
+            order: 4;
+            lex: 0 0 50%;
+            width: 50%;
+        }
+    }
+
+    &__payment {
+        @media ( max-width: 576px ) {
+            order: 5;
+            flex: 0 0 50%;
+            width: 50%;
+            text-align: right;
+        }
+    }
+
     &__name {
         color: #101010;
+        @media ( max-width: 576px ) {
+            order: 1;
+            flex: 0 0 50%;
+            width: 50%;
+        }
     }
 
     &__arrow {
@@ -82,6 +134,11 @@
         @media ( max-width: 991px ) {
             width: rem(40px);
             height: rem(40px);
+        }
+
+        @media ( max-width: 576px ) {
+            transform: translate(0);
+            top: rem(2.5px);
         }
 
         svg {

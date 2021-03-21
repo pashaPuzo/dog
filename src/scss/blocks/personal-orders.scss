@@ -3,8 +3,10 @@
         padding: rem(15px) rem(15px) rem(15px);
     }
 
-    .personal-bubble__title {
-        margin-top: rem(15px);
-        margin-bottom: rem(20px);
+    .personal-bubble {
+        &__title {
+            margin-top: rem(15px);
+            margin-bottom: rem(20px);
+        }
     }
 }
