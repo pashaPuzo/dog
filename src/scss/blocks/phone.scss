@@ -3,11 +3,27 @@
     font-size: rem(18px);
     color: #FFFFFF;
 
+    @media ( max-width: 576px ) {
+        display: block;
+    }
+
+    @media ( max-width: 991px ) {
+        font-size: rem(16px);
+    }
+
+    @media ( max-width: 576px ) {
+        font-size: 0;
+    }
+
     &::before {
         content: url('../images/svg/icon-phone.svg');
         display: inline-block;
         vertical-align: middle;
         margin-top: rem(3px);
         margin-right: rem(7px);
+
+        @media ( max-width: 576px ) {
+            margin: 0;
+        }
     }
 }

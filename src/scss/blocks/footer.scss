@@ -1,12 +1,20 @@
 .footer {
     padding: rem(2px) 0 rem(16px);
 
+    @media ( max-width: 576px ) {
+        padding-bottom: rem(3px);
+    } 
+
     background-color: #212121;
 
     &__menu {
         color: #999999;
         padding: rem(33px) 0;
         border-bottom: 1px solid #313131;
+
+        @media ( max-width: 576px) {
+            padding: rem(23px) 0 rem(19px);
+        }
     }
 
     &__social-menu {

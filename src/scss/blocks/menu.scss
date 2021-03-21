@@ -1,15 +1,24 @@
 .menu {
     text-align: center;
     ul {
-        /* display: flex;
-        align-items: center;
-        justify-content: space-evenly; */
-
         margin: 0 rem(-45px);
+
+        @media ( max-width: 991px ) {
+            margin: 0 rem(-25px);
+        }
+        
         li {
             margin: 0 rem(45px);
             display: inline-block;
             vertical-align: middle;
+
+            @media ( max-width: 991px ) {
+                margin: 0 rem(25px);
+            }
+
+            @media ( max-width: 576px ) {
+                display: block;
+            }
         }
 
         a {
@@ -20,6 +29,10 @@
             color: #999999;
 
             transition: color 0.3s;
+
+            @media ( max-width: 991px ) {
+                font-size: rem(10px);
+            }
 
             &:hover {
                 color:#FFC700;

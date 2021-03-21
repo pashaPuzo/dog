@@ -12,10 +12,20 @@
         font-size: rem(16px);
         color: #FFFFFF;
 
+        @media ( max-width: 576px ) {
+            display: none;
+        }
+
         &.city__current {
             font-weight: 400;
             font-size: rem(16px);
             color: #FFC700;
+
+            @media ( max-width: 576px ) {
+                display: inline-block;
+
+                color: #ffffff
+            }
         }
     }
 

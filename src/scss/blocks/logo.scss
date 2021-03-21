@@ -11,6 +11,10 @@
         max-width: rem(102px);
 
         margin: 0 auto;
+
+        @media ( max-width: 991px ) {
+            max-width: rem(74px);
+        }
     }
 
     &__inner {
@@ -20,5 +24,9 @@
         border-bottom-right-radius: rem(5px);
 
         padding: rem(14px) 0 rem(10px);
+        
+        @media ( max-width: 991px ) {
+            padding: rem(12px) 0 rem(10px);
+        }
     }
 }

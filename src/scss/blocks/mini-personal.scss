@@ -19,11 +19,39 @@
                 max-width: rem(30px);
                 height: rem(30px);
                 margin-right: rem(15px);
+
+                @media ( max-width: 991px ) {
+                    flex: 0 0 rem(15px);
+                    max-width: rem(15px);
+                    height: rem(15px);
+                }
+
+                @media ( max-width: 660px ) {
+                    margin-right: 0;
+                    flex: 0 0 rem(20px);
+                    max-width: rem(20px);
+                    height: rem(20px);
+                }
+
+                @media ( max-width: 576px ) {
+                    flex: 0 0 rem(17px);
+                    max-width: rem(18px);
+                    height: rem(18px);
+                }
             }
             &__info {
-                min-width: 110px;
+                min-width: rem(110px);
                 display: block;
                 text-align: left;
+
+                @media ( max-width: 991px ) {
+                    min-width: rem(70px);
+                }
+
+
+                @media ( max-width: 660px ) {
+                    display: none;
+                }
             }
         }
     }
@@ -37,6 +65,10 @@
     &__hello {
         font-size: rem(12px);
         color: rgba(#FFFFFF, 0.5);
+
+        @media ( max-width: 991px ) {
+            display: none;
+        }
     }
 
     &__info {
