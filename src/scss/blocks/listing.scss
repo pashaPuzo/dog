@@ -3,11 +3,28 @@
     flex-wrap: wrap;
     &--blog {
         margin: 0 rem(-15px) rem(65px);
+
+        @media ( max-width: 576px ) {
+            margin: 0 0 rem(50px);
+        }
+
         .listing {
             &__item {
                 flex: 0 0 calc(100% / 3 - 30px);
                 max-width: calc(100% / 3 - 30px);
                 margin: 0 rem(15px) rem(30px);
+
+                @media ( max-width: 768px ) {
+                    flex: 0 0 calc(100% / 2 - 30px);
+                    max-width: calc(100% / 2 - 30px);
+                    margin: 0 rem(15px) rem(30px);
+                }
+
+                @media ( max-width: 576px ) {
+                    flex: unset;
+                    max-width: 100%;
+                    margin: 0 0 rem(30px);
+                }
             }
         }
     }

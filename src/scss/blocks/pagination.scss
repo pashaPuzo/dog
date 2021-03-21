@@ -16,6 +16,13 @@
         color: #3F3D4A;
         line-height: rem(50px);
 
+        @media ( max-width: 576px ) {
+            width: rem(35px);
+            height: rem(35px);
+            line-height: rem(35px);
+            font-size: rem(12px);
+        }
+
         &--active {
             background-color: #FFC700;
             color: #ffffff;

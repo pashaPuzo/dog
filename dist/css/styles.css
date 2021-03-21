@@ -5510,6 +5510,12 @@ svg {
     }
 }
 
+@media (max-width: 1200px) {
+    .blog-post__image {
+        height: 13.125rem;
+    }
+}
+
 @media (max-width: 991px) {
     .logo__image {
         max-width: 4.625rem;
@@ -5551,6 +5557,17 @@ svg {
         font-size: 0.625rem;
     }
 
+    .blog-post__image {
+        height: 10.9375rem;
+        margin-bottom: 0.625rem;
+    }
+
+    .blog-post__title {
+        font-size: 0.875rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
     .header--transparent .container {
         padding: 0 0.9375rem;
     }
@@ -5563,6 +5580,16 @@ svg {
 
     .header__logo {
         max-width: 6.875rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .listing--blog .listing__item {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(100% / 2 - 30px);
+        flex: 0 0 calc(100% / 2 - 30px);
+        max-width: calc(100% / 2 - 30px);
+        margin: 0 0.9375rem 1.875rem;
     }
 }
 
@@ -5619,6 +5646,25 @@ svg {
 
     .menu ul li {
         display: block;
+    }
+
+    .listing--blog {
+        margin: 0 0 3.125rem;
+    }
+
+    .listing--blog .listing__item {
+        -webkit-box-flex: unset;
+        -ms-flex: unset;
+        flex: unset;
+        max-width: 100%;
+        margin: 0 0 1.875rem;
+    }
+
+    .pagination__item {
+        width: 2.1875rem;
+        height: 2.1875rem;
+        line-height: 2.1875rem;
+        font-size: 0.75rem;
     }
 
     .header__shopping {

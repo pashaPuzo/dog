@@ -7,8 +7,17 @@
         position: relative;
         height: rem(245px);
         overflow: hidden;
-
         margin-bottom: rem(20px);
+
+        @media ( max-width: 1200px) {
+            height: rem(210px);
+        }
+
+        @media ( max-width: 991px ) {
+            height: rem(175px);
+            margin-bottom: rem(10px);
+        }
+
         img {
             position: absolute;
             left: 50%;
@@ -33,6 +42,12 @@
         color: #313131;
 
         margin-bottom: rem(10px);
+
+        @media ( max-width: 991px ) {
+            font-size: rem(14px);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
     }
 
     &__link {
