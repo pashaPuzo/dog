@@ -1,6 +1,15 @@
 .text-styled {
     font-size: rem(18px);
     color: #000000;
+
+    @media ( max-width: 991px ) {
+        font-size: rem(16px);
+    }
+
+    @media ( max-width: 576px ) {
+        font-size: rem(12px);
+    }
+
     p {
         margin-bottom: rem(25px);
     }

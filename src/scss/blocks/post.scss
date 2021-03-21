@@ -7,6 +7,14 @@
         color: #313131;
 
         margin-bottom: rem(7px);
+
+        @media ( max-width: 991px ) {
+            font-size: rem(25px);
+        }
+
+        @media ( max-width: 576px ) {
+            font-size: rem(20px);
+        }
     }
 
     &__date {
@@ -14,6 +22,14 @@
         text-align: center;
         color: #717171;
         margin-bottom: rem(20px);
+
+        @media ( max-width: 991px ) {
+            font-size: rem(14px);
+        }
+
+        @media ( max-width: 576px ) {
+            font-size: rem(12px);
+        }
     }
 
     &__preview {
@@ -25,12 +41,20 @@
     &__inner {
         display: flex;
         align-items: flex-start;
+
+        @media ( max-width: 768px ) {
+            flex-direction: column;
+        }
     }
 
     &__content {
         flex: 0 1 auto;
         max-width: 100%;
         width: 100%;
+
+        @media ( max-width: 768px ) {
+            flex: unset;
+        }
     }
 
     &__sidebar {
@@ -38,5 +62,17 @@
         max-width: rem(370px);
         width: 100%;
         margin-left: rem(30px);
+
+
+        @media ( max-width: 991px ) {
+            flex: 0 0 rem(280px);
+            max-width: rem(280px);
+        }
+
+        @media ( max-width: 768px ) {
+            flex: unset;
+            margin-left: 0;
+            max-width: 100%;
+        }
     }
 }
