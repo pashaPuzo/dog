@@ -2173,6 +2173,7 @@ footer.footer {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 16.875rem;
     flex: 0 0 16.875rem;
+    width: 100%;
     text-align: center;
     margin-right: 1.875rem;
 }
@@ -5549,6 +5550,17 @@ svg {
         font-size: 2.1875rem;
     }
 
+    .personal__sidebar {
+        max-width: 13.75rem;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 13.75rem;
+        flex: 0 0 13.75rem;
+    }
+
+    .personal__sidebar .personal-bubble {
+        padding: 1.875rem 0.9375rem 1.5625rem;
+    }
+
     .menu ul {
         margin: 0 -1.5625rem;
     }
@@ -5558,6 +5570,10 @@ svg {
     }
 
     .menu ul a {
+        font-size: 0.625rem;
+    }
+
+    .main-personal-menu ul a {
         font-size: 0.625rem;
     }
 
@@ -5574,6 +5590,10 @@ svg {
 
     .text-styled {
         font-size: 1rem;
+    }
+
+    .text-styled h3 {
+        font-size: 1.375rem;
     }
 
     .post__title {
@@ -5608,14 +5628,18 @@ svg {
         display: none;
     }
 
+    .personal-sale__text {
+        font-size: 0.875rem;
+    }
+
     .header--transparent .container {
         padding: 0 0.9375rem;
     }
 
     .header__wrapper {
-        padding: 1.9375rem 0 1.6875rem;
+        padding: 1.65625rem 0 1.46875rem;
         padding-left: 7.5rem;
-        min-height: 5.625rem;
+        min-height: 4.9375rem;
     }
 
     .header__logo {
@@ -5624,6 +5648,22 @@ svg {
 }
 
 @media (max-width: 768px) {
+    .personal {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .personal__sidebar {
+        max-width: 100%;
+        -webkit-box-flex: unset;
+        -ms-flex: unset;
+        flex: unset;
+        margin-right: 0;
+        margin-bottom: 1.25rem;
+    }
+
     .listing--blog .listing__item {
         -webkit-box-flex: 0;
         -ms-flex: 0 0 calc(100% / 2 - 30px);
@@ -5707,6 +5747,12 @@ svg {
 
     .section__title {
         font-size: 1.5625rem;
+    }
+
+    .personal-bubble {
+        padding-top: 30px;
+        padding-left: 22px;
+        padding-right: 22px;
     }
 
     .menu ul li {

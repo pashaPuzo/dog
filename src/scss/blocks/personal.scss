@@ -1,6 +1,11 @@
 .personal {
     display: flex;
     align-items: flex-start;
+
+    @media ( max-width: 768px ) {
+        flex-direction: column;
+    }
+
     &__icon {
         margin-bottom: rem(20px);
         .user-icon {
@@ -19,11 +24,28 @@
     &__sidebar {
         max-width: rem(270px);
         flex: 0 0 rem(270px);
+        width: 100%;
         text-align: center;
         margin-right: rem(30px);
 
+        @media ( max-width: 991px ) {
+            max-width: rem(220px);
+            flex: 0 0 rem(220px);
+        }
+
+        @media ( max-width: 768px ) {
+            max-width: 100%;
+            flex: unset;
+            margin-right: 0;
+            margin-bottom: rem(20px);
+        }
+
         .personal-bubble {
             padding: rem(30px) rem(20px) rem(25px);
+
+            @media ( max-width: 991px ) {
+                padding: rem(30px) rem(15px) rem(25px);
+            }
         }
     }
 

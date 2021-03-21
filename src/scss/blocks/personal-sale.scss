@@ -1,0 +1,7 @@
+.personal-sale {
+    &__text {
+        @media ( max-width: 991px ) {
+            font-size: rem(14px);
+        }
+    }
+}

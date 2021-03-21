@@ -7,6 +7,12 @@
 
     transition: background 0.3s;
 
+    @media ( max-width: 576px ) {
+        padding-top: 30px;
+        padding-left: 22px;
+        padding-right: 22px;
+    } 
+
     &__title {
         font-weight: 700;
 

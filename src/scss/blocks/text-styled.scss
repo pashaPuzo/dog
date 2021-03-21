@@ -19,6 +19,10 @@
         font-size: rem(25px);
         color: #313131;
         margin-bottom: rem(15px);
+
+        @media ( max-width: 991px ) {
+            font-size: rem(22px);
+        }
     }
 
     h4 {
