@@ -5,6 +5,10 @@
     background-repeat: no-repeat;
     background-size: cover;
 
+    @media ( max-width: 991px ) {
+        background: transparent;
+    }
+
     .tabs {
         &__target {
             flex: 1;
@@ -13,6 +17,13 @@
 
             text-align: left;
             padding: rem(9.5px) 0 rem(9.5px) rem(25px);
+
+            @media ( max-width: 991px ) {
+                padding: 15px 0 10px;
+                flex: unset;
+                width: 100%;
+                text-align: center;
+            }
         }
 
         &__nav {

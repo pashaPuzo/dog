@@ -3,24 +3,52 @@
     overflow: hidden;
 
     &__column {
-        flex: 0 0 235px;
-        max-width: 235px;
+        flex: 0 0 rem(235px);
+        max-width: rem(235px);
         width: 100%;
         display: flex;
         flex-direction: column;
 
+        @media ( max-width: 991px ) {
+            flex: 0 0 rem(205px);
+            max-width: rem(205px);
+        }
+
         &:first-of-type {
             align-items: flex-end;
+
+            @media ( max-width: 991px ) {
+                align-items: center;
+            }
+
+            @media ( max-width: 576px ) {
+                align-items: flex-end;
+                padding-right: 30px;
+            }
+
             .ingredients-grid {
                 &__item {
                     &:nth-child(1n) {
                         transform: translateX(50%);
+
+                        @media ( max-width: 991px ) {
+                            transform: translateX(25%);
+                        }
                     }
                     &:nth-child(2n) {
                         transform: translateX(0);
+
+                        @media ( max-width: 991px ) {
+                            transform: translateX(0);
+                        }
                     }
+
                     &:nth-child(3n) {
                         transform: translateX(50%);
+
+                        @media ( max-width: 991px ) {
+                            transform: translateX(25%);
+                        }
                     }
                 }
             }
@@ -28,16 +56,38 @@
         &:last-of-type {
             align-items: flex-start;
 
+            @media ( max-width: 991px ) {
+                align-items: center;
+            }
+
+            @media ( max-width: 576px ) {
+                align-items: flex-start;
+                padding-left: 30px;
+            }
+
             .ingredients-grid {
                 &__item {
                     &:nth-child(1n) {
                         transform: translateX(-50%);
+
+                        @media ( max-width: 991px ) {
+                            transform: translateX(-25%);
+                        }
                     }
                     &:nth-child(2n) {
                         transform: translateX(0);
+
+                        @media ( max-width: 991px ) {
+                            transform: translateX(0);
+                        }
                     }
+
                     &:nth-child(3n) {
                         transform: translateX(-50%);
+
+                        @media ( max-width: 991px ) {
+                            transform: translateX(-25%);
+                        }
                     }
 
                     .ingredient__button {
@@ -63,6 +113,11 @@
             flex: 1;
             max-width: 100%;
             justify-content: center;
+
+            @media ( max-width: 991px ) {
+                flex: 1;
+                max-width: 100%;
+            }
 
             .ingredients-grid {
                 &__item {

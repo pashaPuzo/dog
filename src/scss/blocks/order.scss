@@ -222,6 +222,13 @@
         width: 100%;
         margin-left: rem(75px);
         text-align: right;
+
+        @media ( max-width: 576px ) {
+            margin-left: auto;
+
+            flex: 0 0 rem(50px);
+            max-width: rem(50px);
+        } 
     }
 }
 

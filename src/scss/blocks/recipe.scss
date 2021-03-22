@@ -1,6 +1,10 @@
 .recipe {
     &__inner {
         display: flex;
+
+        @media ( max-width: 991px ) {
+            display: block;
+        }
     }
 
     &__slider {
@@ -9,6 +13,18 @@
         width: 100%;
 
         margin-right: rem(30px);
+
+        @media ( max-width: 991px ) {
+            float: left;
+            flex: unset;
+        }
+
+        @media ( max-width: 768px ) {
+            float: unset;
+            max-width: 100%;
+
+            margin-bottom: rem(15px);
+        }
 
         .slider-recipe {
             border-radius: rem(5px);
@@ -31,6 +47,10 @@
         color: #101010;
 
         margin-bottom: rem(15px);
+
+        @media ( max-width: 991px ) {
+            font-size: rem(16px);
+        }
     }
 
     &__text {
@@ -41,6 +61,18 @@
 
 
         .beautiful-list {
+            @media ( max-width: 991px ) {
+                margin-bottom: rem(37px);
+
+                &:last-of-type {
+                    margin-bottom: rem(20px);
+                }
+            }
+
+            @media ( max-width: 768px ) {
+                margin-bottom: rem(20px);
+            }
+
             &__title {
                 font-weight: bold;
                 font-size: rem(12px);
@@ -49,6 +81,7 @@
                 color: #101010;
 
                 margin-bottom: rem(10px);
+
             }
             li {
                 margin-bottom: rem(15px);

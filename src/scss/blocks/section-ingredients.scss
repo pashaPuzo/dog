@@ -1,9 +1,22 @@
 .section-ingredients {
     padding-top: rem(85px);
+
+    @media ( max-width: 991px ) {
+        padding-top: rem(40px);
+    }
+
+    @media ( max-width: 576px ) {
+        padding-top: rem(15px);
+    }
+
     .section {
         &__title {
             text-align: center;
             margin-bottom: rem(80px);
+
+            @media ( max-width: 991px ) {
+                margin-bottom: rem(25px);
+            }
         }
     }
 }

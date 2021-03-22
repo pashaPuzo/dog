@@ -5,11 +5,19 @@
     background-repeat: no-repeat;
     background-size: cover;
 
+    @media ( max-width: 991px ) {
+        background: transparent;
+    }
+
     &.js-has-element-translate {
         transition: margin 0.3s, padding 0.3s;
         .section-advantages {
             &__wrapper {
                 padding-top: rem(100px);
+
+                @media ( max-width: 991px ) {
+                    padding-top: 0;
+                }
             }
         }
     }
@@ -17,6 +25,14 @@
     &__list {
         display: flex;
         flex-wrap: wrap;
+
+        @media ( max-width: 768px ) {
+            justify-content: center;
+        }
+
+        @media ( max-width: 576px ) {
+            justify-content: flex-start;
+        }
     }
 
     &__item {
@@ -25,6 +41,20 @@
         width: 100%;
 
         margin: 0 rem(15px) rem(40px);
+
+        @media ( max-width: 991px ) {
+            margin: 0 rem(15px) rem(30px);
+        }
+
+        @media ( max-width: 768px ) {
+            flex: 0 0 calc( 100% / 3 - 30px );
+            max-width: calc( 100% / 3 - 30px );
+        }
+
+        @media ( max-width: 576px ) {
+            flex: 0 0 calc( 100% / 2 - 30px );
+            max-width: calc( 100% / 2 - 30px );
+        }
 
         .advantage {
             margin: 0 auto;

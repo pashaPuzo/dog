@@ -1,9 +1,13 @@
 .section-main {
-    @include adaptive-value('height', 779, 413, 1);
+    @include adaptive-value('height', 779, 576, 1);
 
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    @media ( max-width: 768px ) {
+        height: rem(576px);
+    }
 
     .container, &__wrapper{
         height: 100%;
@@ -25,6 +29,16 @@
         text-align: center;
         color: #FFFFFF;
         margin-bottom: rem(20px);
+
+        @media ( max-width: 991px ) {
+            line-height: rem(45px);
+            margin-bottom: rem(10px);
+        }
+
+        @media ( max-width: 576px ) {
+            line-height: rem(40px);
+            font-size: rem(30px);
+        }
     }
 
     &__sub-title {
@@ -34,6 +48,17 @@
         color: #FFFFFF;
 
         margin-bottom: rem(41px);
+
+        @media ( max-width: 991px ) {
+            font-size: rem(22px);
+
+            margin-bottom: rem(50px);
+        }
+        
+        @media ( max-width: 576px ) {
+            font-size: rem(16px);
+            line-height: rem(24px);
+        } 
     }
 
     &__button {

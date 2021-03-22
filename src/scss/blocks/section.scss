@@ -1,5 +1,8 @@
 .section {
     padding: rem(40px) 0;
+    @media ( max-width: 576px ) {
+        padding: rem(15px) 0;
+    }
     &__title {
         font-family: "Souvenir";
         font-size: rem(45px);

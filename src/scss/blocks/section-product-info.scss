@@ -17,7 +17,6 @@
         flex: 0 0 rem(755px);
         max-width: rem(755px);
         width: 100%;
-        margin-right: rem(50px);
     }
 
     &__right {
@@ -39,6 +38,81 @@
         &__item {
             border: rem(1px) solid #E5E5E5;
             border-radius: rem(5px);
+        }
+    }
+}
+
+.product-package {
+    &__image {
+        position: relative;
+    }
+
+    &__params {
+        position: absolute;
+        left: 0;
+        bottom: rem(4px);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin: 0 rem(-15px);
+
+        transform: translateX(75px);
+    }
+
+    &__param {
+        width: rem(61px);
+        height: rem(61px);
+
+        border-radius: 50%;
+        font-weight: 700;
+        font-size: rem(10px);
+        text-align: center;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #000000;
+
+        margin: 0 rem(15px);
+
+        line-height: rem(61px);
+
+        background-image: url('../images/map-placemark-group_62x62.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+
+        background-size: cover;
+
+        sup, sub {
+            color: #FFA800;
+        }
+    }
+
+    &__info {
+        margin-top: 10px;
+        transform: translateX(39px);
+        font-weight: 700;
+        font-size: rem(12px);
+        text-align: center;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #101010;
+
+        sup, sub {
+            color: #FFA800;
+        }
+
+        &:last-of-type {
+            font-size: rem(17px);
+        }
+
+        &--notice {
+            letter-spacing: 0;
+            font-weight: 400;
+            font-size: rem(16px);
+            text-align: center;
+            color: #717171;
+            text-decoration: none;
         }
     }
 }

@@ -4,6 +4,12 @@
 
     background-position: center bottom;
     background-repeat: no-repeat;
+
+    @media ( max-width: 991px ) {
+        background: transparent;
+        padding-bottom: rem(30px);
+    }
+
     .section {
         &__title {
             text-align: center;
@@ -16,14 +22,73 @@
             color: #000000;
 
             margin-bottom: rem(40px);
+
+            @media ( max-width: 991px ) {
+                font-size: rem(16px);
+            }
         }
     }
 
     .tabs {
+        @media ( max-width: 991px ) {
+            flex-direction: column;
+        } 
+        &__header {
+            @media ( max-width: 991px ) {
+                max-width: 100%;
+                flex: 0 0 100%;
+                margin-right: 0;
+            }
+        }
+
+        &__nav {
+            @media ( max-width: 991px ) {
+                display: flex;
+                margin: 0 rem(-6px);
+
+                li {
+                    margin: 0 rem(6px);
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                }
+            }
+
+            @media ( max-width: 576px ) {
+                flex-wrap: wrap;
+                li {
+                    flex: 0 0 calc( 100% / 2 - 12px );
+                    max-width: calc( 100% / 2 - 12px );
+                    width: 100%;
+                    margin-bottom: rem(6px);
+                    font-size: rem(10px);
+
+                    padding: rem(15px) rem(5px);
+                }
+            } 
+        }
+
+        &__icon {
+            @media ( max-width: 991px ) {
+                margin-right: 0;
+                margin-bottom: rem(5px);
+            }
+
+            @media ( max-width: 576px ) {
+                display: none;
+            }
+        }
+
         &__item {
             background: #FFFFFF;
             border-radius: 10px;
             padding: rem(30px) rem(25px);
+
+            @media ( max-width: 576px ) {
+                padding: rem(17px);
+            }
         }
     }
 }

@@ -5,7 +5,11 @@
         text-align: center;
         letter-spacing: 0.05em;
         text-transform: uppercase;
-        color: #000000;        
+        color: #000000;
+
+        @media ( max-width: 576px ) {
+            font-size: rem(10px);
+        }
     }
 
     &__image {
@@ -14,6 +18,16 @@
         margin: 0 auto;
 
         position: relative;
+
+        @media ( max-width: 991px ) {
+            width: rem(110px);
+            height: rem(110px);
+        }
+
+        @media ( max-width: 576px ) {
+            width: rem(70px);
+            height: rem(70px);
+        }
 
         img {
             position: absolute;

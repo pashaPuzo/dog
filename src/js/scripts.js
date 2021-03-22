@@ -112,12 +112,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 loop: true,
                 on: {
                     transitionEnd: (swiper) => {
-                        let sliderHeight =
-                            swiper.slides[swiper.activeIndex].clientHeight;
-                        setOffsetAfterBlock(slider.closest(".home-info"), {
-                            top: sliderHeight,
-                            bottom: 0,
-                        });
+                        if ( window.innerWidth >= 992 ) {
+                            let sliderHeight =
+                                swiper.slides[swiper.activeIndex].clientHeight;
+                            setOffsetAfterBlock(slider.closest(".home-info"), {
+                                top: sliderHeight,
+                                bottom: 0,
+                            });
+                        } else {
+                            setOffsetAfterBlock(slider.closest(".home-info"), {
+                                top: 0,
+                                bottom: 0,
+                            });
+                        }
                     },
                 },
             });
@@ -153,7 +160,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 spaceBetween: 15,
                 observer: true,
                 observeParents: true,
-
                 pagination: {
                     el: ".swiper-pagination",
                     dynamicBullets: true,
@@ -162,13 +168,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 on: {
                     init: (swiper) => {
-                        let maxHeight = getMaxHeight(swiper.slides);
 
-                        swiper.slides.forEach((slide) => {
-                            slide.style.height = `${maxHeight}px`;
-                        });
+
+                        if ( window.innerWidth >= 991 ) {
+                            let maxHeight = getMaxHeight(swiper.slides);
+    
+                            swiper.slides.forEach((slide) => {
+                                slide.style.height = `${maxHeight}px`;
+                            });
+                        } else {
+                            swiper.slides.forEach((slide) => {
+                                slide.style.height = 'auto';
+                            });
+                        }
                     },
                 },
+
+                breakpoints: {
+                    320: {
+                        slidesPerColumn: 1,
+                        slidesPerView: 1,
+                        autoHeight: true,
+                    },
+
+                    768: {
+                        slidesPerColumn: 2,
+                        slidesPerView: 2,
+                        slidesPerColumnFill: 'row',
+                    },
+
+                    991.05: {
+                        slidesPerView: 4,
+                        spaceBetween: 15,
+                    }
+                }
             });
         });
     };

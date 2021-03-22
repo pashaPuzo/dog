@@ -16,6 +16,17 @@
 
         margin-bottom: rem(35px);
 
+        @media ( max-width: 991px ) {
+            width: rem(90px);
+            height: rem(90px);
+
+            margin-bottom: rem(20px);
+        }
+
+        @media ( max-width: 576px ) {
+            margin-bottom: rem(10px);
+        }
+
         &::before {
             content: "";
             display: block;
@@ -27,6 +38,11 @@
             background: rgba(#FFFFFF, 0.6);
             border-radius: rem(10px);
             z-index: -1;
+
+            @media ( max-width: 991px ) {
+                width: rem(90px);
+                height: rem(90px);
+            }
         }
     }
 
@@ -37,5 +53,15 @@
         letter-spacing: 0.02em;
         text-transform: uppercase;
         color: #101010;
+
+        @media ( max-width: 991px ) {
+            font-size: rem(12px);
+
+            br {display: none;}
+        }
+
+        @media ( max-width: 576px ) {
+            font-size: rem(10px);
+        }
     }
 }

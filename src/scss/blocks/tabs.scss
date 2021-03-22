@@ -1,5 +1,5 @@
 .tabs {
-    &__target{
+    &__target {
         &--has-icon {
             & > * {
                 vertical-align: middle;
@@ -11,6 +11,11 @@
                     max-height: rem(25px);
 
                     margin-right: rem(6px);
+
+                    @media ( max-width: 991px ) {
+                        max-width: 100%;
+                        width: 100%;
+                    }
 
                     svg {
                         max-width: rem(40px);
