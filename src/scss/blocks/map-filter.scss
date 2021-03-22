@@ -1,5 +1,15 @@
 .map-filter {
     margin: 0 rem(-10px);
+
+    @media ( max-width: 991px ) {
+        display: flex;
+    }
+
+    @media ( max-width: 768px ) {
+        margin: 0 -7.5px;
+        flex-wrap: wrap;
+    }
+
     &__item {
         display: inline-block;
         padding: rem(13px) rem(20px) rem(15px);
@@ -15,6 +25,20 @@
         background-color: #e5e5e5;
         color: #A1A1A1;
         transition: all 0.3s;
+
+        @media ( max-width: 991px ) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: rem(13px) rem(20px);
+        }
+
+        @media ( max-width: 768px ) {
+            flex: 1 1 calc( 100% / 2 - 15px );
+            max-width: calc( 100% / 2 - 15px );
+            margin: 0 7.5px;
+            margin-bottom: rem(10px);
+        }
 
         &:hover,
         &.active {

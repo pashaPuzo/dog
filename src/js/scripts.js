@@ -353,6 +353,22 @@ document.addEventListener("DOMContentLoaded", () => {
                 loop: false,
                 slidesPerView: 3,
                 centeredSlides: true,
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1,
+                        centeredSlides: true,
+                    },
+
+                    768: {
+                        slidesPerView: 3,
+                        centeredSlides: true,
+                    },
+
+                    991.05: {
+                        slidesPerView: 3,
+                        centeredSlides: true,
+                    }
+                }
             });
 
             let reviewSliderPrev = slider

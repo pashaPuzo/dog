@@ -3,6 +3,14 @@
     height: rem(610px);
     position: relative;
 
+    @media ( max-width: 768px ) {
+        width: 100%;
+    }
+
+    @media ( max-width: 576px ) {
+        height: auto;
+    }
+
     &__item {
         height: rem(610px);
         background-image: url('../images/IPhone.png');
@@ -14,6 +22,10 @@
         filter: blur(4px);
         transition: transform 0.3s, opacity 0.3s, filter 0.2s;
 
+        @media ( max-width: 576px ) {
+            height: auto;
+        }
+
         &.swiper-slide-active {
             position: relative;
             transform: scale(1.4);
@@ -21,6 +33,9 @@
             z-index: 1;
             filter: none;
             opacity: 1;
+            @media ( max-width: 576px ) {
+                transform: scale(1);
+            }
         }
     }
 
@@ -46,6 +61,12 @@
         background-position: center center;
         background-repeat: no-repeat;
         cursor: pointer;
+        @media ( max-width: 576px ) {
+            width: rem(35px);
+            height: rem(35px);
+
+            background-size: rem(15px);
+        }
     }
 
     &__prev {

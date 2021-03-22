@@ -7,9 +7,25 @@
     background-size: 100%;
     position: relative;
 
+    @media (max-width: 1200px) {
+        background-size: cover;
+    }
+
     .section {
         &__title {
             margin-bottom: rem(35px);
+
+            @media (max-width: 576px) {
+                text-align: center;
+            }
+        }
+    }
+
+    .table {
+        &__col {
+            @media ( max-width: 576px ) {
+                font-size: rem(10px);
+            }
         }
     }
 
@@ -17,6 +33,11 @@
         flex: 0 0 rem(755px);
         max-width: rem(755px);
         width: 100%;
+
+        @media ( max-width: 1200px ) {
+            flex: 1;
+            max-width: 100%;
+        }
     }
 
     &__right {
@@ -29,10 +50,66 @@
     }
 
     .tabs {
+        @media ( max-width: 1200px ) {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+        }
+
+        &__header {
+            @media ( max-width: 1200px ) {
+                flex: 0 0 100%;
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+
         &__content {
             background: #FFFFFF;
             border-radius: 10px;
             padding: rem(10px);
+
+            @media ( max-width: 1200px ) {
+                flex: 0 1 calc( 100% - 245px );
+                max-width: calc( 100% - 245px );
+                width: 100%;
+            }
+
+            @media ( max-width: 768px ) {
+                flex: 0 0 100%;
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+
+        .product-package {
+            @media ( max-width: 768px ) {
+                margin: 0 auto;
+                margin-top: rem(20px);
+            }
+
+            @media ( max-width: 576px ) {
+                max-width: 100%;
+                margin: 0 -15px;
+                margin-top: rem(15px);
+            }
+        }
+
+        &__nav {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 rem(-10px);
+            li {
+                @media ( max-width: 768px ) {
+                    max-width: calc( 100% / 2 - 20px );
+                    width: 100%;
+                    margin: 0 rem(10px) rem(10px);
+                    font-size: rem(10px);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
         }
 
         &__item {
@@ -43,6 +120,13 @@
 }
 
 .product-package {
+    max-width: rem(365px);
+    width: 100%;
+
+    @media ( max-width: 1200px ) {
+        max-width: rem(245px);
+    }
+
     &__image {
         position: relative;
     }
@@ -59,6 +143,11 @@
         margin: 0 rem(-15px);
 
         transform: translateX(75px);
+
+        @media ( max-width: 1200px ) {
+            margin: 0 rem(-5px);
+            transform: translateX(40px);
+        }
     }
 
     &__param {
@@ -83,6 +172,13 @@
 
         background-size: cover;
 
+        @media ( max-width: 1200px ) {
+            width: rem(50px);
+            height: rem(50px);
+            margin: 0 rem(5px);
+            line-height: rem(50px);
+        }
+
         sup, sub {
             color: #FFA800;
         }
@@ -98,6 +194,14 @@
         text-transform: uppercase;
         color: #101010;
 
+        @media ( max-width: 1200px ) {
+            margin-top: 5px;
+        }
+
+        @media ( max-width: 768px ) {
+            transform: translateX(0);
+        }
+
         sup, sub {
             color: #FFA800;
         }
@@ -112,7 +216,7 @@
             font-size: rem(16px);
             text-align: center;
             color: #717171;
-            text-decoration: none;
+            text-transform: none;
         }
     }
 }

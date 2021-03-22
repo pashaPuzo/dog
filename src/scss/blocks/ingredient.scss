@@ -54,5 +54,19 @@
         right: 0px;
         top: 50%;
         transform: translate(40%, -50%);
+
+        @media ( max-width: 991px ) {
+            width: rem(40px);
+            height: rem(40px);
+            background-size: auto;
+            padding: 0;
+        }
+
+        @media ( max-width: 576px ) {
+            width: rem(30px);
+            height: rem(30px);
+            background-size: auto;
+            padding: 0;
+        }
     }
 }

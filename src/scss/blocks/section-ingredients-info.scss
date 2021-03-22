@@ -18,11 +18,28 @@
             text-align: left;
             padding: rem(9.5px) 0 rem(9.5px) rem(25px);
 
+            @media ( max-width: 1200px ) {
+                padding: rem(9.5px) rem(5px) rem(9.5px) rem(5px);
+            }
+
             @media ( max-width: 991px ) {
                 padding: 15px 0 10px;
                 flex: unset;
                 width: 100%;
                 text-align: center;
+            }
+
+            @media ( max-width: 768px ) {
+                max-width: calc( 100% / 2 - 15px );
+                width: 100%;
+                margin: 0 7.5px 7.5px;
+            }
+
+            @media ( max-width: 576px ) {
+                padding: rem(15px) rem(5px);
+                .tabs__icon {
+                    display: none;
+                }
             }
         }
 
@@ -32,6 +49,11 @@
             justify-content: space-between;
             flex-wrap: nowrap;
             overflow: hidden;
+
+            @media ( max-width: 768px ) {
+                flex-wrap: wrap;
+                margin: 0 -7.5px 0;
+            }
         }
     }
 }

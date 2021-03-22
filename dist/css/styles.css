@@ -3883,7 +3883,8 @@ footer.footer {
 }
 
 .modal-success {
-    max-width: 23.125rem;
+    max-width: 26.5625rem;
+    width: 100%;
 }
 
 .modal-success .modal__header {
@@ -3907,6 +3908,7 @@ footer.footer {
     text-align: center;
     color: #101010;
     max-width: 15.9375rem;
+    margin: 0 auto;
 }
 
 .modal-cart {
@@ -4950,9 +4952,23 @@ footer.footer {
     padding: 0.625rem;
 }
 
+.section-product-info .tabs__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 -0.625rem;
+}
+
 .section-product-info .tabs__item {
     border: 0.0625rem solid #E5E5E5;
     border-radius: 0.3125rem;
+}
+
+.product-package {
+    max-width: 22.8125rem;
+    width: 100%;
 }
 
 .product-package__image {
@@ -5030,7 +5046,7 @@ footer.footer {
     font-size: 1rem;
     text-align: center;
     color: #717171;
-    text-decoration: none;
+    text-transform: none;
 }
 
 .section-ingredients-info {
@@ -5175,6 +5191,10 @@ footer.footer {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 90%;
+}
+
+.section-reviews .section__title {
+    margin-bottom: 0;
 }
 
 .section-reviews__footer {
@@ -5587,6 +5607,12 @@ svg {
     }
 }
 
+@media (max-width: 1440px) {
+    .section-reviews {
+        background-size: contain;
+    }
+}
+
 @media (max-width: 1320px) {
     .section-main {
         height: calc( 576px + 203 * ((100vw - 320px) / 1000));
@@ -5598,8 +5624,80 @@ svg {
         height: 13.125rem;
     }
 
+    .section-product-info {
+        background-size: cover;
+    }
+
+    .section-product-info__left {
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        max-width: 100%;
+    }
+
+    .section-product-info .tabs {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+    }
+
+    .section-product-info .tabs__header {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .section-product-info .tabs__content {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 1 calc( 100% - 245px);
+        flex: 0 1 calc( 100% - 245px);
+        max-width: calc( 100% - 245px);
+        width: 100%;
+    }
+
+    .product-package {
+        max-width: 15.3125rem;
+    }
+
+    .product-package__params {
+        margin: 0 -0.3125rem;
+        -webkit-transform: translateX(40px);
+        -ms-transform: translateX(40px);
+        transform: translateX(40px);
+    }
+
+    .product-package__param {
+        width: 3.125rem;
+        height: 3.125rem;
+        margin: 0 0.3125rem;
+        line-height: 3.125rem;
+    }
+
+    .product-package__info {
+        margin-top: 5px;
+    }
+
+    .section-ingredients-info .tabs__target {
+        padding: 0.59375rem 0.3125rem 0.59375rem 0.3125rem;
+    }
+
     .section-production {
         background: transparent;
+    }
+
+    .section-reviews {
+        background: transparent;
+    }
+
+    .section-reviews__slider .slider-reviews {
+        margin: 0 auto;
     }
 }
 
@@ -5820,6 +5918,13 @@ svg {
         height: 6.875rem;
     }
 
+    .ingredient__button {
+        width: 2.5rem;
+        height: 2.5rem;
+        background-size: auto;
+        padding: 0;
+    }
+
     .ingredients-grid__column {
         -webkit-box-flex: 0;
         -ms-flex: 0 0 12.8125rem;
@@ -5979,6 +6084,45 @@ svg {
         margin-bottom: 0.3125rem;
     }
 
+    .section-reviews__quote {
+        padding: 2.875rem 2.1875rem;
+        font-size: 1.125rem;
+    }
+
+    .map-filter {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .map-filter__item {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        padding: 0.8125rem 1.25rem;
+    }
+
+    .map-address__image {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 1.875rem;
+        flex: 0 0 1.875rem;
+        max-width: 1.875rem;
+    }
+
+    .map-address__city {
+        font-size: 1.25rem;
+    }
+
+    .map-address__text {
+        font-size: 0.75rem;
+    }
+
     .order__header {
         font-size: 0.5625rem;
         padding: 0.9375rem 2.5rem 0.9375rem 0.3125rem;
@@ -6128,6 +6272,57 @@ svg {
         max-width: calc( 100% / 3 - 30px);
     }
 
+    .slider-reviews {
+        width: 100%;
+    }
+
+    .section-product-info .tabs__content {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .section-product-info .tabs .product-package {
+        margin: 0 auto;
+        margin-top: 1.25rem;
+    }
+
+    .section-product-info .tabs__nav li {
+        max-width: calc( 100% / 2 - 20px);
+        width: 100%;
+        margin: 0 0.625rem 0.625rem;
+        font-size: 0.625rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .product-package__info {
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    .section-ingredients-info .tabs__target {
+        max-width: calc( 100% / 2 - 15px);
+        width: 100%;
+        margin: 0 7.5px 7.5px;
+    }
+
+    .section-ingredients-info .tabs__nav {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin: 0 -7.5px 0;
+    }
+
     .recipe__slider {
         float: unset;
         max-width: 100%;
@@ -6136,6 +6331,25 @@ svg {
 
     .recipe__text .beautiful-list {
         margin-bottom: 1.25rem;
+    }
+
+    .map-filter {
+        margin: 0 -7.5px;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .map-filter__item {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 calc( 100% / 2 - 15px);
+        flex: 1 1 calc( 100% / 2 - 15px);
+        max-width: calc( 100% / 2 - 15px);
+        margin: 0 7.5px;
+        margin-bottom: 0.625rem;
+    }
+
+    .map .map-address {
+        max-width: 100%;
     }
 }
 
@@ -6237,6 +6451,56 @@ svg {
 
     .post__date {
         font-size: 0.75rem;
+    }
+
+    .modal-order {
+        max-width: 19.375rem;
+        padding: 0.625rem 0.9375rem 0.9375rem;
+    }
+
+    .modal-success {
+        max-width: 19.375rem;
+        padding: 0.625rem 0.9375rem 0.9375rem;
+    }
+
+    .modal-repassword {
+        max-width: 19.375rem;
+        padding: 0.625rem 0.9375rem 0.9375rem;
+    }
+
+    .modal-login {
+        max-width: 19.375rem;
+        padding: 0.625rem 0.9375rem 0.9375rem;
+    }
+
+    .modal-city {
+        max-width: 19.375rem;
+        padding: 0.625rem 0.9375rem 0.9375rem;
+    }
+
+    .modal-city .modal__footer {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .modal-city .modal__footer .button {
+        -webkit-box-flex: unset;
+        -ms-flex: unset;
+        flex: unset;
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 0.625rem;
+    }
+
+    .modal-city-choises {
+        max-width: 19.375rem;
+        padding: 0.625rem 0.9375rem 0.9375rem;
+    }
+
+    .city-change__list {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
     }
 
     .header__shopping {
@@ -6351,22 +6615,86 @@ svg {
         height: 4.375rem;
     }
 
+    .ingredient__button {
+        width: 1.875rem;
+        height: 1.875rem;
+        background-size: auto;
+        padding: 0;
+    }
+
+    .ingredients-grid__column {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 7.5rem;
+        flex: 0 0 7.5rem;
+        max-width: 7.5rem;
+    }
+
     .ingredients-grid__column:first-of-type {
-        -webkit-box-align: end;
-        -ms-flex-align: end;
-        align-items: flex-end;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
         padding-right: 30px;
     }
 
     .ingredients-grid__column:last-of-type {
-        -webkit-box-align: start;
-        -ms-flex-align: start;
-        align-items: flex-start;
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        align-items: flex-end;
         padding-left: 30px;
+    }
+
+    .ingredients-grid__column--center {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
+        max-width: 100%;
     }
 
     .section-ingredients {
         padding-top: 0.9375rem;
+    }
+
+    .slider-reviews {
+        height: auto;
+    }
+
+    .slider-reviews__item {
+        height: auto;
+    }
+
+    .slider-reviews__item.swiper-slide-active {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+    }
+
+    .slider-reviews__prev,
+  .slider-reviews__next {
+        width: 2.1875rem;
+        height: 2.1875rem;
+        background-size: 0.9375rem;
+    }
+
+    .section-product-info .section__title {
+        text-align: center;
+    }
+
+    .section-product-info .table__col {
+        font-size: 0.625rem;
+    }
+
+    .section-product-info .tabs .product-package {
+        max-width: 100%;
+        margin: 0 -15px;
+        margin-top: 0.9375rem;
+    }
+
+    .section-ingredients-info .tabs__target {
+        padding: 0.9375rem 0.3125rem;
+    }
+
+    .section-ingredients-info .tabs__target .tabs__icon {
+        display: none;
     }
 
     .section-recipes .tabs__nav {
@@ -6391,6 +6719,11 @@ svg {
 
     .section-recipes .tabs__item {
         padding: 1.0625rem;
+    }
+
+    .section-reviews__quote {
+        padding: 1.25rem 1.875rem;
+        font-size: 0.875rem;
     }
 
     .order__status {
@@ -6472,5 +6805,29 @@ svg {
         -ms-flex: 0 0 3.125rem;
         flex: 0 0 3.125rem;
         max-width: 3.125rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .ingredients-grid__column--center {
+        -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.3);
+    }
+}
+
+@media (max-width: 375px) {
+    .ingredients-grid__column--center {
+        -webkit-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+}
+
+@media (max-width: 340px) {
+    .ingredients-grid__column--center {
+        -webkit-transform: scale(1.9);
+        -ms-transform: scale(1.9);
+        transform: scale(1.9);
     }
 }

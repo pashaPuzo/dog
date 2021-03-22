@@ -4,6 +4,21 @@
     background-repeat: no-repeat;
 
     background-size: 90%;
+
+    @media ( max-width: 1440px ) {
+        background-size: contain;
+    }
+
+    @media ( max-width: 1200px ) {
+        background: transparent;
+    }
+
+    .section {
+        &__title {
+            margin-bottom: 0;
+        }
+    }
+
     &__footer {
         background-color: #FFFFFF;
         box-shadow: 0px rem(4px) rem(10px) rgba(0, 0, 0, 0.05);
@@ -20,12 +35,28 @@
         border-radius: rem(5px);
 
         padding: rem(55px) rem(55px);
+
+        @media ( max-width: 991px ) {
+            padding: rem(46px) rem(35px);
+            font-size: rem(18px);
+        }
+
+        @media ( max-width: 576px ) {
+            padding: rem(20px) rem(30px);
+            font-size: rem(14px);
+        }
     }
 
     &__slider {
         display: flex;
         align-items: center;
         justify-content: flex-end;
+
+        @media ( max-width: 1200px ) {
+            .slider-reviews {
+                margin: 0 auto
+            }
+        }
     }
 
     &__body {
