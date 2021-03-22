@@ -5597,6 +5597,10 @@ svg {
     .blog-post__image {
         height: 13.125rem;
     }
+
+    .section-production {
+        background: transparent;
+    }
 }
 
 @media (max-width: 991px) {

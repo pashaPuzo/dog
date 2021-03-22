@@ -4,6 +4,10 @@
     background-position: center center;
     background-repeat: no-repeat;
 
+    @media ( max-width: 1200px ) {
+        background: transparent;
+    }
+
     &__text {
         max-width: 770px;
         width: 100%;
