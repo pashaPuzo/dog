@@ -2,6 +2,11 @@
     display: flex;
     height: 100%;
 
+    @media ( max-width: 768px ) {
+        flex-direction: column;
+        position: relative;
+    }
+
     &__title {
         text-align: left;
         font-weight: 700;
@@ -10,6 +15,10 @@
         margin-bottom: 5px;
         text-transform: none;
         letter-spacing: 0;
+
+        @media ( max-width: 991px ) {
+            font-size: rem(20px);
+        }
     }
 
     &__info {
@@ -18,6 +27,10 @@
         letter-spacing: 0.05em;
         color: #A1A1A1;
         margin-bottom: rem(20px);
+
+        @media ( max-width: 991px ) {
+            font-size: rem(9px);
+        }
     }
 
     &__left {
@@ -26,12 +39,28 @@
         width: 100%;
 
         padding: rem(35px) rem(15px) 0 rem(20px);
+
+        @media ( max-width: 991px ) {
+            max-width: rem(285px);
+            flex: 0 0 rem(285px);
+            padding-top: rem(25px);
+        }
+
+        @media ( max-width: 768px ) {
+            flex: unset;
+            max-width: 100%;
+        }
     }
 
     &__right {
         flex: 0 1 auto;
         max-width: 100%;
         width: 100%;
+        @media ( max-width: 768px ) {
+            flex: unset;
+            max-width: 100%;
+            height: 265px;
+        }
     }
 
     &__map {
@@ -58,6 +87,62 @@
         overflow: hidden;
         overflow-y: auto;
         padding-right: rem(8px);
+    
+        @media ( max-height: 780px ) {
+            max-height: 233px;
+        }
+    }
+
+    &__points-adapt {
+        @media ( max-width: 768px ) {
+            padding: 0 7.5px;
+            position: absolute;
+            background-color: #ffffff;
+            width: 100%;
+            left: 0;
+            z-index: 99;
+            bottom: 0;
+            transform: translateY(calc(100% - 50px));
+            transition: transform 0.3s, top 0.3s;
+
+            &.js-active {
+                transform: translateY(0);
+                top: 0;
+
+                .delivery__points {
+                    max-height: 370px;
+                }
+            }
+        }
+        &__header {
+            display: none;
+            @media ( max-width: 768px ) {
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                padding: 17.5px 0;
+                display: block;
+                font-weight: 700;
+                font-size: rem(10px);
+                text-align: center;
+                letter-spacing: 0.05em;
+                color: #101010;
+                text-transform: uppercase;
+                position: relative;
+            }
+
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 23px;
+                height: 3px;
+                background: #C4C4C4;
+                border-radius: 10px;
+                top: 7px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
     }
 }
 
@@ -70,11 +155,21 @@
 
     color: #A1A1A1;
 
+    .input-radio__label {
+        @media ( max-width: 991px ) {
+            font-size: rem(10px);
+        }
+    }
+
     &__title {
         text-transform: uppercase;
         font-weight: bold;
         font-size: rem(12px);
         margin-bottom: rem(2px);
+
+        @media ( max-width: 991px ) {
+            font-size: rem(10px);
+        }
     }
 
     &__city {
@@ -86,6 +181,10 @@
         font-size: rem(10px);
         letter-spacing: 0.05em;
         text-transform: uppercase;
+
+        @media ( max-width: 991px ) {
+            font-size: rem(8px);
+        }
     }
 
     &:hover {

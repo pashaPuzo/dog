@@ -2,9 +2,26 @@
     padding: 0;
     max-width: rem(825px);
     width: 100%;
+
+    @media ( max-width: 850px ) {
+        max-width: rem(720px);
+    }
+
+    @media ( max-width: 768px ) {
+        max-width: rem(540px);
+    }
+
     .modal{
         &__inner {
             height: rem(480px);
+
+            @media ( max-width: 768px ) {
+                height: rem(360px);
+
+                &.js-open-cart {
+                    height: rem(480px);
+                }
+            }
         }
     }
 }

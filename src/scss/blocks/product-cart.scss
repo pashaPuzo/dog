@@ -32,6 +32,12 @@
         flex: 0 0 rem(99px);
         max-width: rem(99px);
         width: 100%;
+
+
+        @media ( max-width: 768px ) {
+            flex: 0 0 rem(91px);
+            max-width: rem(91px);
+        }
     }
 
     &__right {

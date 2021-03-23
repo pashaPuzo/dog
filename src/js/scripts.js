@@ -399,4 +399,17 @@ document.addEventListener("DOMContentLoaded", () => {
         block.find('.order__header').toggleClass('active');
         block.find('.order__body').slideToggle().toggleClass('active');
     })
+
+    body.on('submit', '.js-add-to-cart', function(e){
+        e.preventDefault();
+        $(this).slideUp();
+        $(this).next().slideDown();
+
+        $(this).closest('.modal__inner').addClass('js-open-cart');
+    });
+
+    body.on('click', '.delivery__points-adapt__header', function(e){
+        e.preventDefault();
+        $(this).closest('.delivery__points-adapt').toggleClass('js-active');
+    })
 });

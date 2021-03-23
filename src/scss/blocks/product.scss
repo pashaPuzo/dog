@@ -17,6 +17,18 @@
         background-repeat: no-repeat;
 
         transform: translateX(-36%);
+
+        @media ( max-width: 880px ) {
+            width: rem(185px);
+            height: rem(125px);
+        }
+
+        @media ( max-width: 768px ) {
+            width: rem(120px);
+            height: rem(80px);
+
+            margin-bottom: rem(7px);
+        }
     }
 
 
