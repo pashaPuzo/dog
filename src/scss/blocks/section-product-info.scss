@@ -42,11 +42,12 @@
 
     &__right {
         flex: 0 1 auto;
+        margin-top: auto;
     }
 
     &__body {
         display: flex;
-        align-items: flex-end;
+        // align-items: flex-end;
     }
 
     .tabs {

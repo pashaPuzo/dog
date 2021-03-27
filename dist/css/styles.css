@@ -5040,15 +5040,13 @@ footer.footer {
     -webkit-box-flex: 0;
     -ms-flex: 0 1 auto;
     flex: 0 1 auto;
+    margin-top: auto;
 }
 
 .section-product-info__body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: end;
-    -ms-flex-align: end;
-    align-items: flex-end;
 }
 
 .section-product-info .tabs__content {
