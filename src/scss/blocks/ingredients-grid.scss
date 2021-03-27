@@ -1,6 +1,5 @@
 .ingredients-grid {
     display: flex;
-    overflow: hidden;
 
     &__column {
         flex: 0 0 rem(235px);
@@ -17,6 +16,14 @@
         @media ( max-width: 576px ) {
             flex: 0 0 rem(120px);
             max-width: rem(120px);
+        }
+
+        &.active {
+            z-index: 1;
+
+            @media ( max-width: 576px ) {
+                font-size: 18px;
+            }
         }
 
         &:first-of-type {
@@ -99,6 +106,20 @@
                         right: auto;
                         left: 0;
                         transform: translate(-50%, -50%);
+
+                        &.active {
+                            transform: translate(-50%, -50%) rotate(45deg);
+                        }
+                    }
+
+                    .ingredient-modal {
+                        right: auto;
+                        left: 0;
+                        transform: translate(-100%, -50%);
+                        
+                        @media ( max-width: 576px ) {
+                            transform: translate(-85%, -50%);
+                        }
                     }
                 }
             }

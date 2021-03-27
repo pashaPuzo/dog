@@ -1,12 +1,22 @@
 .home-info {
-    transform: translateY(-50%);
+    background-image: url(../images/section-bg-2.png);
+    background-position: center center;
+    background-repeat: repeat;
 
-    @media ( max-width: 991px ) {
-        transform: translateY(rem(-50px));
-    }
+    &__wrapper {
+        transform: translateY(-150px);
 
-    @media ( max-width: 576px ) {
-        transform: translateY(rem(-45px));
+        @media ( max-width: 1200px ) {
+            transform: translateY(-100px);
+        }
+
+        @media ( max-width: 991px ) {
+            transform: translateY(rem(-50px));
+        }
+    
+        @media ( max-width: 576px ) {
+            transform: translateY(rem(-45px));
+        }
     }
 
     &__content {
@@ -55,5 +65,9 @@
         @media ( max-width: 576px ) {
             transform: translate(25%, -20%);
         }
+    }
+
+    .slide-info {
+        margin-bottom: 20px;
     }
 }

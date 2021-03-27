@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     };
-    initHomeInfo();
+    // initHomeInfo();
 
     const initProductInfo = () => {
         let sliders = document.querySelectorAll(
@@ -223,6 +223,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 pagination: {
                     el: ".swiper-pagination",
                     dynamicBullets: true,
+                    clickable: true,
                 },
             });
         });
@@ -412,4 +413,21 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         $(this).closest('.delivery__points-adapt').toggleClass('js-active');
     })
+
+    body.on('click', '.ingredient__button', function(e){
+        e.preventDefault();
+        $(this).closest('.ingredients-grid').find('.ingredient-modal').removeClass('active');
+        $(this).closest('.ingredients-grid').find('.ingredient__button.active').removeClass('active');
+        $(this).closest('.ingredients-grid').find('.ingredients-grid__column.active').removeClass('active');
+
+        $(this).addClass('active');
+        $(this).closest('.ingredient').find('.ingredient-modal').addClass('active');
+        $(this).closest('.ingredients-grid__column').addClass('active');
+    })
+
+    body.on('click', '.ingredient__button.active, .ingredient-modal__close', function(e){
+        $(this).removeClass('active');
+        $(this).closest('.ingredient').find('.ingredient-modal').removeClass('active');
+        $(this).closest('.ingredients-grid__column').removeClass('active');
+    });
 });

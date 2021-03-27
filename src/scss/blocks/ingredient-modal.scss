@@ -1,0 +1,62 @@
+.ingredient-modal {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    opacity: 0;
+    visibility: hidden;
+    padding: 11px;
+    transition: all 0.3s;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__inner {
+        border: 1px solid #F5F5F5;
+        border-radius: 10px;
+        padding: 35px 25px 35px 40px;
+
+        @media ( max-width: 991px ) {
+            padding: 20px 20px 20px 25px;
+        }
+
+        position: relative;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 25px;
+        color: #101010;        
+        margin-bottom: 10px;
+
+        @media ( max-width: 991px ) {
+            font-size: 20px;
+        }
+
+        @media ( max-width: 768px ) {
+            font-size: 18px;
+        }
+    }
+
+    &__descr {
+        font-weight: normal;
+        font-size: 14px;
+        color: #101010;
+
+        @media ( max-width: 768px ) {
+            font-size: 10px;
+        }
+    }
+
+    &__close {
+        display: none;
+
+        @media ( max-width: 576px ) {
+            display: block;
+            position: absolute;
+            right: 10px;
+            top: 5px;
+        }
+    }
+}

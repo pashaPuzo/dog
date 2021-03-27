@@ -76,9 +76,9 @@
         top: 0;
         opacity: 0;
         visibility: hidden;
-        transform: translateY(-10%);
+        // transform: translateY(-10%);
 
-        transition: opacity 0.3s, transform 0.3s;
+        // transition: opacity 0.6s, transform 0.3s;
 
         &.active {
             opacity: 1;
@@ -115,7 +115,7 @@
             }
 
             &__item {
-                transform: translateY(0) translateX(-10%);
+                // transform: translateY(0) translateX(-10%);
                 &.active {
                     transform: translate(0);
                 }

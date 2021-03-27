@@ -1,5 +1,6 @@
 .section-ingredients {
     padding-top: rem(85px);
+    overflow: hidden;
 
     @media ( max-width: 991px ) {
         padding-top: rem(40px);
@@ -7,6 +8,7 @@
 
     @media ( max-width: 576px ) {
         padding-top: rem(15px);
+        position: relative;
     }
 
     .section {

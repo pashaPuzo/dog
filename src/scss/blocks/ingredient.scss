@@ -27,6 +27,8 @@
         @media ( max-width: 576px ) {
             width: rem(70px);
             height: rem(70px);
+
+            position: static;
         }
 
         img {
@@ -37,9 +39,30 @@
             top: 0;
             object-fit: contain;
         }
+
+        .ingredient-modal {
+            position: absolute;
+            width: 395px;
+            right: 0;
+            top: 50%;
+            transform: translate(100%, -50%);
+
+            @media ( max-width: 768px ) {
+                width: 290px;
+            }
+
+            @media ( max-width: 576px ) {
+                right: auto;
+                left: 50%;
+                transform: translate(-10.8%, -50%);
+
+                z-index: 1;
+            }
+        }
     }
 
     &__button {
+        outline: none !important;
         width: rem(50px);
         height: rem(50px);
         font-size: 0;
@@ -54,6 +77,7 @@
         right: 0px;
         top: 50%;
         transform: translate(40%, -50%);
+        transition: all 0.3s;
 
         @media ( max-width: 991px ) {
             width: rem(40px);
@@ -67,6 +91,10 @@
             height: rem(30px);
             background-size: auto;
             padding: 0;
+        }
+
+        &.active {
+            transform: translate(40%, -50%) rotate(45deg);
         }
     }
 }
