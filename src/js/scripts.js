@@ -13,7 +13,7 @@ import { getMaxHeight } from "./libs/helpers";
 import Modal from "./libs/modal";
 import qty from "./libs/qty";
 import tabs from "./libs/tabs";
-// require('./libs/disabled-copy');
+require('./libs/disabled-copy');
 
 import Swiper from "swiper";
 import SwiperCore, { Navigation, Pagination } from "swiper/core";
