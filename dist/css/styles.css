@@ -5186,6 +5186,30 @@ footer.footer {
     overflow: hidden;
 }
 
+.section-ingredients-info__tabs {
+    position: relative;
+}
+
+.section-ingredients-info__tabs.active .section-ingredients-info__pseudo {
+    display: none;
+}
+
+.section-ingredients-info__tabs.active .tabs__target {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.section-ingredients-info__pseudo {
+    display: none;
+}
+
 .recipe__inner {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -7056,11 +7080,72 @@ svg {
     }
 
     .section-ingredients-info .tabs__target {
+        display: none;
         padding: 0.9375rem 0.3125rem;
+        max-width: 100%;
+        width: 100%;
+        margin: 0 0 7.5px;
+    }
+
+    .section-ingredients-info .tabs__target.active {
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+        order: -1;
+    }
+
+    .section-ingredients-info .tabs__target.active::before {
+        content: "";
+        display: block;
+        width: 30px;
+        height: 30px;
+        background-image: url("../images/svg/select-dropdown.svg");
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 12px;
     }
 
     .section-ingredients-info .tabs__target .tabs__icon {
-        display: none;
+        -webkit-box-flex: unset;
+        -ms-flex: unset;
+        flex: unset;
+        max-width: 40px;
+        width: 100%;
+    }
+
+    .section-ingredients-info .tabs__target span {
+        text-align: left;
+        display: block;
+        max-width: 75px;
+        width: 100%;
+    }
+
+    .section-ingredients-info .tabs__nav {
+        margin: 0 0 0;
+    }
+
+    .section-ingredients-info__pseudo {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
     }
 
     .section-recipes .tabs__nav {

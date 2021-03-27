@@ -430,4 +430,16 @@ document.addEventListener("DOMContentLoaded", () => {
         $(this).closest('.ingredient').find('.ingredient-modal').removeClass('active');
         $(this).closest('.ingredients-grid__column').removeClass('active');
     });
+
+    body.on('click', '.section-ingredients-info__pseudo', function (e) {
+        e.preventDefault();
+
+        $(this).closest('.section-ingredients-info__tabs').addClass('active');
+    });
+
+    body.on('click', '.section-ingredients-info .tabs__target', function (e) {
+        e.preventDefault();
+
+        $(this).closest('.section-ingredients-info__tabs').removeClass('active');
+    });
 });
