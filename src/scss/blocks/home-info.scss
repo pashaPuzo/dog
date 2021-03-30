@@ -1,7 +1,11 @@
 .home-info {
-    background-image: url(../images/section-bg-2.png);
+    // background-image: url(../images/section-bg-2.png);
     background-position: center center;
     background-repeat: repeat;
+
+    @media ( max-width: 991px ) {
+        background: none !important;
+    }
 
     &__wrapper {
         transform: translateY(-150px);

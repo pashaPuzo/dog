@@ -1,12 +1,12 @@
 .section-advantages {
-    background-image: url(../images/section-bg-2.png);
+    // background-image: url(../images/section-bg-2.png);
 
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 
     @media ( max-width: 991px ) {
-        background: transparent;
+        background: transparent !important;
     }
 
     &.js-has-element-translate {

@@ -2948,6 +2948,7 @@ footer.footer {
 }
 
 .input-group--edit + .button {
+    display: none;
     opacity: 0;
     visibility: hidden;
     -webkit-transition: all 0.3s;
@@ -2956,6 +2957,7 @@ footer.footer {
 }
 
 .input-group--edit.active + .button {
+    display: block;
     opacity: 1;
     visibility: visible;
     -webkit-transition: all 0.3s;
@@ -4463,7 +4465,6 @@ footer.footer {
 }
 
 .home-info {
-    background-image: url(../images/section-bg-2.png);
     background-position: center center;
     background-repeat: repeat;
 }
@@ -4557,7 +4558,6 @@ footer.footer {
 }
 
 .section-advantages {
-    background-image: url(../images/section-bg-2.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -4943,7 +4943,6 @@ footer.footer {
 
 .slider-reviews__item {
     height: 38.125rem;
-    background-image: url("../images/IPhone.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
@@ -5101,6 +5100,7 @@ footer.footer {
 .product-package__param {
     width: 3.8125rem;
     height: 3.8125rem;
+    position: relative;
     border-radius: 50%;
     font-weight: 700;
     font-size: 0.625rem;
@@ -5110,10 +5110,37 @@ footer.footer {
     color: #000000;
     margin: 0 0.9375rem;
     line-height: 3.8125rem;
-    background-image: url("../images/map-placemark-group_62x62.png");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+}
+
+.product-package__param::before,
+.product-package__param::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.product-package__param::before {
+    background-color: #FFC700;
+    width: 3.8125rem;
+    height: 3.8125rem;
+}
+
+.product-package__param::after {
+    background-color: #ffffff;
+    width: 3.3125rem;
+    height: 3.3125rem;
+}
+
+.product-package__param span {
+    position: relative;
+    z-index: 1;
 }
 
 .product-package__param sup,
@@ -5153,7 +5180,6 @@ footer.footer {
 }
 
 .section-ingredients-info {
-    background-image: url("../images/section-5-bg.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -5279,7 +5305,6 @@ footer.footer {
 
 .section-recipes {
     padding-bottom: 16.75rem;
-    background-image: url("../images/section-6-bg.png");
     background-position: center bottom;
     background-repeat: no-repeat;
 }
@@ -5303,7 +5328,6 @@ footer.footer {
 }
 
 .section-production {
-    background-image: url("../images/section-7-bg.png");
     background-position: center center;
     background-repeat: no-repeat;
 }
@@ -5811,6 +5835,23 @@ svg {
         line-height: 3.125rem;
     }
 
+    .product-package__param::before {
+        width: 3.125rem;
+        height: 3.125rem;
+    }
+
+    .product-package__param::after {
+        width: 2.875rem;
+        height: 2.875rem;
+    }
+
+    .product-package__param {
+        width: 3.3125rem;
+        height: 3.3125rem;
+        margin: 0 0.3125rem;
+        line-height: 3.3125rem;
+    }
+
     .product-package__info {
         margin-top: 5px;
     }
@@ -5820,7 +5861,7 @@ svg {
     }
 
     .section-production {
-        background: transparent;
+        background: transparent !important;
     }
 
     .section-reviews {
@@ -6049,6 +6090,10 @@ svg {
         padding-left: 1.25rem;
     }
 
+    .home-info {
+        background: none !important;
+    }
+
     .home-info__wrapper {
         -webkit-transform: translateY(-3.125rem);
         -ms-transform: translateY(-3.125rem);
@@ -6075,7 +6120,7 @@ svg {
     }
 
     .section-advantages {
-        background: transparent;
+        background: transparent !important;
     }
 
     .section-advantages.js-has-element-translate .section-advantages__wrapper {
@@ -6177,7 +6222,7 @@ svg {
     }
 
     .section-ingredients-info {
-        background: transparent;
+        background: transparent !important;
     }
 
     .section-ingredients-info .tabs__target {
@@ -6213,7 +6258,7 @@ svg {
     }
 
     .section-recipes {
-        background: transparent;
+        background: transparent !important;
         padding-bottom: 1.875rem;
     }
 
@@ -6665,6 +6710,14 @@ svg {
         justify-content: center;
     }
 
+    .product-package {
+        max-width: unset;
+    }
+
+    .product-package__image img {
+        margin: 0 auto;
+    }
+
     .product-package__info {
         -webkit-transform: translateX(0);
         -ms-transform: translateX(0);
@@ -6743,6 +6796,16 @@ svg {
         height: 1.125rem;
     }
 
+    .mini-personal__tip {
+        right: 1px;
+    }
+
+    .mini-personal:hover .mini-personal__tooltip {
+        -webkit-transform: translate(3%, 0%);
+        -ms-transform: translate(3%, 0%);
+        transform: translate(3%, 0%);
+    }
+
     .phone {
         display: block;
     }
@@ -6811,6 +6874,29 @@ svg {
 
     .post__date {
         font-size: 0.75rem;
+    }
+
+    .personal-edit .form-group {
+        max-width: 100%;
+        margin-bottom: 0;
+    }
+
+    .personal-edit .form-group__row {
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: start;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .personal-edit .form-group__row .input-group {
+        width: 100%;
+        margin-bottom: 0.625rem;
+    }
+
+    .personal-edit .form-group__row .button {
+        margin: 0;
+        margin-right: 0.625rem;
     }
 
     .modal-order {
@@ -6974,6 +7060,7 @@ svg {
         width: 4.375rem;
         height: 4.375rem;
         position: static;
+        margin-bottom: 1.125rem;
     }
 
     .ingredient__image .ingredient-modal {
@@ -7073,16 +7160,34 @@ svg {
 
     .section-product-info .tabs .product-package {
         max-width: 100%;
-        margin: 0 -15px;
         margin-top: 0.9375rem;
+    }
+
+    .section-product-info .tabs .product-package .product-package__image {
+        height: 210px;
+    }
+
+    .section-product-info .tabs .product-package .product-package__image img {
+        height: 100%;
+        max-width: unset;
+        width: auto;
+        margin: 0 auto;
+    }
+
+    .product-package__params {
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+        margin: 0;
     }
 
     .section-ingredients-info .tabs__target {
         display: none;
-        padding: 0.9375rem 0.3125rem;
+        padding: 0.8125rem 0.1875rem;
         max-width: 100%;
         width: 100%;
-        margin: 0 0 7.5px;
+        margin: -1px 0 0;
+        border-radius: 0;
     }
 
     .section-ingredients-info .tabs__target.active {
@@ -7099,6 +7204,7 @@ svg {
         -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
         order: -1;
+        border-radius: 10px;
     }
 
     .section-ingredients-info .tabs__target.active::before {

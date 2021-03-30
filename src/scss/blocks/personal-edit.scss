@@ -4,13 +4,34 @@
 
         margin-bottom: rem(15px);
 
+        @media ( max-width: 576px ) {
+            max-width: 100%;
+            margin-bottom: 0;
+        }
+
         &__row {
             align-items: flex-end;
+
+            @media ( max-width: 576px ) {
+                align-items: start;
+                flex-wrap: wrap;
+
+                .input-group {
+                    width: 100%;
+
+                    margin-bottom: rem(10px);
+                }
+            }
 
             .button {
                 flex: 0 0 rem(112px);
                 max-width: rem(112px);
                 margin-left: rem(10px);
+
+                @media ( max-width: 576px ) {
+                    margin: 0;
+                    margin-right: rem(10px);
+                }
             }
         }
     }

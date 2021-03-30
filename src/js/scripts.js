@@ -30,9 +30,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* Использование WebP в CSS background */
     testWebP((support) => {
-        if (support == true)
+        if (support === true) {
             document.querySelector("body").classList.add("webp");
-        else document.querySelector("body").classList.add("no-webp");
+            let images = document.querySelectorAll('[data-bg]');
+
+            images.forEach(block => {
+                let { webpBg } = block.dataset;
+
+                block.style.backgroundImage = `url(${webpBg})`;
+            });
+        } else {
+            document.querySelector("body").classList.add("no-webp");
+
+            let images = document.querySelectorAll('[data-bg]');
+            images.forEach(block => {
+                let { bg } = block.dataset;
+
+                block.style.backgroundImage = `url(${bg})`;
+            });
+        }
     });
 
     /* Инит динамического адаптива */

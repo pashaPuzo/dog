@@ -1,12 +1,12 @@
 .section-recipes {
     padding-bottom: rem(268px);
-    background-image: url('../images/section-6-bg.png');
+    // background-image: url('../images/section-6-bg.png');
 
     background-position: center bottom;
     background-repeat: no-repeat;
 
     @media ( max-width: 991px ) {
-        background: transparent;
+        background: transparent !important;
         padding-bottom: rem(30px);
     }
 

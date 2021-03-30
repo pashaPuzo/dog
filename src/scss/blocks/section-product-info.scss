@@ -91,8 +91,18 @@
 
             @media ( max-width: 576px ) {
                 max-width: 100%;
-                margin: 0 -15px;
+                // margin: 0 -15px;
                 margin-top: rem(15px);
+
+                .product-package__image {
+                    height: 210px;
+                    img {
+                        height: 100%;
+                        max-width: unset;
+                        width: auto;
+                        margin: 0 auto;
+                    }
+                }
             }
         }
 
@@ -128,8 +138,18 @@
         max-width: rem(245px);
     }
 
+    @media ( max-width: 768px ) {
+        max-width: unset;
+    }
+
     &__image {
         position: relative;
+
+        @media ( max-width: 768px ) {
+            img {
+                margin: 0 auto;
+            }
+        }
     }
 
     &__params {
@@ -149,11 +169,17 @@
             margin: 0 rem(-5px);
             transform: translateX(40px);
         }
+
+        @media ( max-width: 576px ) {
+            transform: translateX(0);
+            margin: 0;
+        }
     }
 
     &__param {
         width: rem(61px);
         height: rem(61px);
+        position: relative;
 
         border-radius: 50%;
         font-weight: 700;
@@ -162,22 +188,63 @@
         letter-spacing: 0.05em;
         text-transform: uppercase;
         color: #000000;
-
         margin: 0 rem(15px);
-
         line-height: rem(61px);
 
-        background-image: url('../images/map-placemark-group_62x62.png');
-        background-position: center center;
-        background-repeat: no-repeat;
 
-        background-size: cover;
+        &::before, &::after {
+            content: "";
+            display: block;
+
+            position: absolute;
+            left: 50%;
+            top: 50%;
+
+            transform: translate(-50%, -50%);
+
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        &::before {
+            background-color: #FFC700;
+            width: rem(61px);
+            height: rem(61px);
+        }
+
+        &::after {
+            background-color: #ffffff;
+            width: rem(53px);
+            height: rem(53px);
+        }
+
+        span {
+            position: relative;
+            z-index: 1;
+        }
 
         @media ( max-width: 1200px ) {
             width: rem(50px);
             height: rem(50px);
             margin: 0 rem(5px);
             line-height: rem(50px);
+
+            &::before {
+                width: rem(50px);
+                height: rem(50px);
+            }
+    
+            &::after {
+                width: rem(46px);
+                height: rem(46px);
+            }
+        }
+
+        @media ( max-width: 1200px ) {
+            width: rem(53px);
+            height: rem(53px);
+            margin: 0 rem(5px);
+            line-height: rem(53px);
         }
 
         sup, sub {

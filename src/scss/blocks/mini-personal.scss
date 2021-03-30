@@ -137,6 +137,10 @@
         transform: translate(-50%, 50%) rotate(45deg);
         box-shadow: rem(-3px) rem(-3px) rem(6px) #d6d6d6;
         transition: transform 200ms ease-out;
+
+        @media ( max-width: 576px ) {
+            right: 1px;
+        }
     }
 
     &:hover {
@@ -145,6 +149,10 @@
                 opacity: 1;
                 transform: translate(20%, 0%);
                 visibility: visible;
+
+                @media ( max-width: 576px ) {
+                    transform: translate(3%, 0%);
+                }
             }
         }
     }
